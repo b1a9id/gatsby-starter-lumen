@@ -1,5 +1,5 @@
 ---
-title: "うちたてとは？"
+title: "About me"
 template: "page"
 ---
 

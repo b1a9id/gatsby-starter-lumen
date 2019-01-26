@@ -2,8 +2,8 @@
 
 module.exports = {
   url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Ryosuke Uchitate',
+  subtitle: 'Java Developer in Japan. My favorite clothes brands are ETHOSENS, STOF, bedsidedrama and Portaille.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -19,16 +19,12 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Ryosuke Uchitate',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Java Developer in Japan. I like clothes. My favorite clothes brands are ETHOSENS, STOF, bedsidedrama and Portaille.',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      twitter: 'b1a9idps',
+      github: 'b1a9id'
     }
   }
 };
