@@ -42,8 +42,7 @@ flyコマンドについては、[こちら](https://concourse-ci.org/fly.html)
 
 ##### fly CLIをダウンロード
 
-\[http://127.0.0.1:8080/]にアクセスして、OSのロゴをクリックするとfly CLIのバイナリが落ちてきます。（今回はMacで話を進めます）
-
+[http://127.0.0.1:8080/](http://127.0.0.1:8080/)にアクセスして、OSのロゴをクリックするとfly CLIのバイナリが落ちてきます。（今回はMacで話を進めます）
 
 ![](/media/1.png)
 
@@ -72,7 +71,7 @@ navigate to the following URL in your browser:
 or enter token manually:
 ```
 
-メッセージにしたがってhttp://127.0.0.1:8080/sky/login?redirect_uri=http://127.0.0.1:54711/auth/callbackにアクセスすると、ログイン画面が表示されます。
+メッセージにしたがって[http://127.0.0.1:8080/sky/login?redirect_uri=http://127.0.0.1:54711/auth/callback](http://127.0.0.1:8080/sky/login?redirect_uri=http://127.0.0.1:54711/auth/callback)にアクセスすると、ログイン画面が表示されます。
 docker-compose.ymlの`services.concourse.environment.CONCOURSE_ADD_LOCAL_USER`に設定されている。username:admin、password:adminでログインできます。
 コマンドでもログインできます。
 
@@ -106,8 +105,7 @@ targets:
 エイリアスの作成をしたので、flyコマンド実行時に `fly --target tutorial` とうつことでこのConcourse APIをターゲットにできます。
 
 #### Taskを実行する
-
-##### task_hello_world.ymlの実行
+##### task\_hello\_world.ymlの実行
 
 任意のディレクトリで次のコマンドを実行し、concourse-tutolialをクローンしてtask_hello_world.ymlを実行します。これは、`echo hello world`と出力するだけの簡単タスクです。
 
@@ -127,10 +125,10 @@ hello world
 succeeded
 ```
 
-\[http://127.0.0.1:8080/builds/1:title]にアクセスするとWebUIで実行結果を確認できます。
+[http://127.0.0.1:8080/builds/1](http://127.0.0.1:8080/builds/1)にアクセスするとWebUIで実行結果を確認できます。
 \[f:id:b1a9id:20190111182150p:plain]
 
-##### task_ubuntu_uname.ymlの実行
+##### task\_ubuntu\_uname.ymlの実行
 
 ```
 $ fly -t tutorial execute -c task_ubuntu_uname.yml
@@ -141,7 +139,7 @@ Linux 303a03ea-bb52-406c-6da3-93235f258a59 4.9.125-linuxkit #1 SMP Fri Sep 7 08:
 succeeded
 ```
 
-これも同様に、\[http://127.0.0.1:8080/builds/4:title]にアクセスするとWebUIで実行結果を確認できます。
+これも同様に、[http://127.0.0.1:8080/builds/4](http://127.0.0.1:8080/builds/4にアクセスするとWebUIで実行結果を確認できます。
 \[f:id:b1a9id:20190111183032p:plain]
 
 今回はとりあえずここまでです。
