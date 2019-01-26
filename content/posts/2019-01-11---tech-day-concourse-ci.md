@@ -4,7 +4,10 @@ title: 初めてのTech DayでConcourse CIに入門した
 slug: /posts/tech-day-concourse-ci/
 draft: false
 date: '2019-01-11T18:46:04.121Z'
-description: 初めてのTech DayでConcourse CIに入門した
+description: >-
+  コイニーのバックエンドチームでTech Dayを初開催しました！ Tech
+  Dayとは、「日々のプロジェクトにリソースを取られて、技術獲得やチャレンジができず知的好奇心を満たせていない」と感じたリーダーが（勝手に）企画してくれたとてもありがたい日です。2週ごとに1日くらいのペースでやっていくつもりです。
+  題材は、自チームや自身のメリットに繋がることであれば何でもよいです。
 category: CI/CD
 tags:
   - Concourse
