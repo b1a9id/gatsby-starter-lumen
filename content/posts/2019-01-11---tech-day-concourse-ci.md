@@ -111,7 +111,7 @@ targets:
 
 ##### task\_hello\_world.ymlの実行
 
-任意のディレクトリで次のコマンドを実行し、concourse-tutolialをクローンしてtask_hello_world.ymlを実行します。これは、`echo hello world`と出力するだけの簡単タスクです。
+任意のディレクトリで次のコマンドを実行し、concourse-tutolialをクローンしてtask\_hello\_world.ymlを実行します。これは、`echo hello world`と出力するだけの簡単タスクです。
 
 ```
 $ git clone https://github.com/starkandwayne/concourse-tutorial
