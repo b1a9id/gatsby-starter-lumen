@@ -8,7 +8,7 @@ description: >-
   Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。ついでなので2.0.x -> 2.1.xで変更された点もまとめます。
   変更点見つけたら随時書いていこうと思います。 移行前のSpring
   Bootのバージョンは1.5.10です。2系のバージョンは、2.1.1（2018/12/14時点の最新）です。
-category: Backend
+category: Spring Boot
 tags:
   - Spring Boot
 ---
