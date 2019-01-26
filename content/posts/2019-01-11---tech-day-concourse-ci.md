@@ -44,7 +44,7 @@ flyコマンドについては、[こちら](https://concourse-ci.org/fly.html)
 
 <http://127.0.0.1:8080/>にアクセスして、OSのロゴをクリックするとfly CLIのバイナリが落ちてきます。（今回はMacで話を進めます）
 
-![](/media/1.png)
+![1](/media/1.png "1")
 
 ダウンロードしたら次のコマンドを実行します。
 
@@ -128,8 +128,7 @@ succeeded
 
 <http://127.0.0.1:8080/builds/1>にアクセスするとWebUIで実行結果を確認できます。
 
-
-![](/media/2.png)
+![2](/media/2.png "2")
 
 ##### task_ubuntu_uname.ymlの実行
 
@@ -142,9 +141,8 @@ Linux 303a03ea-bb52-406c-6da3-93235f258a59 4.9.125-linuxkit #1 SMP Fri Sep 7 08:
 succeeded
 ```
 
-これも同様に、\[http://127.0.0.1:8080/builds/4](http://127.0.0.1:8080/builds/4)にアクセスするとWebUIで実行結果を確認できます。
+これも同様に、<http://127.0.0.1:8080/builds/4>にアクセスするとWebUIで実行結果を確認できます。
 
-
-![](/media/3.png)
+![3](/media/3.png "3")
 
 今回はとりあえずここまでです。
