@@ -1,12 +1,37 @@
 ---
-title: "About me"
+title: "うちたてとは？"
 template: "page"
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+### 所属
+- コイニー株式会社
+- 日本Javaユーザグループ
+- 株式会社waja(Fashion Charity Project)
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+### 職歴
+- コムチュア株式会社(2014/4 ~ 2015/4)	
+	- 統合監視ツールの導入
+- タグバンガーズ株式会社(2015/5 ~ 2017/3)	
+	- Webアプリケーションエンジニア	
+	- 受託開発
+- 株式会社waja(2017/4 ~ 2018/5)	
+	- Webアプリケーションエンジニア	
+	- ファッションECの開発	
+	- Fashion Charity Projectのフルリプレース
+- コイニー株式会社(2018/6 ~ )	
+	- Webアプリケーションエンジニア	
+	- 決済サービスの開発
+	
+### スキル
+- Java8 ~
+- Spring Framework, Spring Boot
+- AWS
+- Vue.js(独学)
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
-
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+### SNS
+- [Twitter](https://twitter.com/b1a9idps)
+- [GitHub](https://github.com/b1a9id)
+- [SlideShare](https://www.slideshare.net/RyosukeUchitate)
+- [note](https://note.mu/b1a9idps)
+- [Facebook](https://ja-jp.facebook.com/people/Ryosuke-Uchitate/100004147568068)
+- [wear](http://wear.jp/blackid/)
