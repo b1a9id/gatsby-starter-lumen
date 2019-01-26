@@ -106,7 +106,7 @@ targets:
 
 #### Taskを実行する
 
-##### task_hello_world.ymlの実行
+##### task\_hello\_world.ymlの実行
 
 任意のディレクトリで次のコマンドを実行し、concourse-tutolialをクローンしてtask_hello_world.ymlを実行します。これは、`echo hello world`と出力するだけの簡単タスクです。
 
@@ -130,7 +130,7 @@ succeeded
 
 ![2](/media/2.png "2")
 
-##### task_ubuntu_uname.ymlの実行
+##### task\_ubuntu\_uname.ymlの実行
 
 ```
 $ fly -t tutorial execute -c task_ubuntu_uname.yml
