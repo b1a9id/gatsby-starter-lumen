@@ -32,6 +32,7 @@ template: "page"
 - [Twitter](https://twitter.com/b1a9idps)
 - [GitHub](https://github.com/b1a9id)
 - [SlideShare](https://www.slideshare.net/RyosukeUchitate)
+- [old blog](https://uchi-fashion.hatenablog.com/)
 - [note](https://note.mu/b1a9idps)
 - [Facebook](https://ja-jp.facebook.com/people/Ryosuke-Uchitate/100004147568068)
 - [wear](http://wear.jp/blackid/)
