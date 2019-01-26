@@ -142,7 +142,7 @@ Linux 303a03ea-bb52-406c-6da3-93235f258a59 4.9.125-linuxkit #1 SMP Fri Sep 7 08:
 succeeded
 ```
 
-これも同様に、\[http://127.0.0.1:8080/builds/4](http://127.0.0.1:8080/builds/4にアクセスするとWebUIで実行結果を確認できます。
+これも同様に、\[http://127.0.0.1:8080/builds/4](http://127.0.0.1:8080/builds/4)にアクセスするとWebUIで実行結果を確認できます。
 
 
 ![](/media/3.png)
