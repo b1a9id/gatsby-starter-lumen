@@ -1,13 +1,13 @@
 ---
+template: post
 title: SpringBoot1系から2系に移行しててハマった点
-date: "2018-12-14T12:23:32.169Z"
-template: "post"
+slug: /posts/migrate-from-boot1-to-boot2/
 draft: false
-slug: "/posts/migrate-from-boot1-to-boot2/"
-category: "Typography"
+date: '2018-12-14T12:23:32.169Z'
+description: SpringBoot1系から2系に移行しててハマった点
+category: Backend
 tags:
-  - "Spring Boot"
-description: "SpringBoot1系から2系に移行しててハマった点"
+  - Spring Boot
 ---
 
 Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。ついでなので2.0.x -> 2.1.xで変更された点もまとめます。
