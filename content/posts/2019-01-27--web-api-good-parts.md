@@ -6,10 +6,10 @@ draft: false
 date: '2019-01-27T13:10:04.121Z'
 description: >-
   「Web API The Good Parts」を読んでのまとめです。
-category: Concourse
+category: 読書
 tags:
   - 読書
-  
+---
 タイトルのとおり、「Web API The Good Parts」を読んでのまとめです。
 # 第１章　Web APIとは何か
 - この本でいうWeb APIは「HTTPプロトコルを利用してネットワーク越しに呼び出すAPI」  
