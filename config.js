@@ -1,13 +1,16 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://www.b1a9idps.com',
   title: 'Blog by Ryosuke Uchitate',
   subtitle: 'Java Developer in Japan. My favorite clothes brands are ETHOSENS, STOF, bedsidedrama and Portaille.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-73379983-2',
+  blogImageUrl: 'https://www.b1a9idps.com/photo.jpg',
+  blogAuthorTwitterUserName: 'b1a9idps',
+  facebookAppId: '100004147568068',
   menu: [
     {
       label: 'Articles',
