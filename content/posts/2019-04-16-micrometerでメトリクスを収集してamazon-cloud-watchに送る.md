@@ -107,10 +107,10 @@ management:
   metrics:
     use-global-registry: false
     export:
-    cloudwatch:
-      namespace: Micrometer/test
-      enable: true
-      step: 1s
+      cloudwatch:
+        namespace: Micrometer/test
+        enable: true
+        step: 1s
 cloud:
   aws:
     stack:
@@ -121,3 +121,6 @@ cloud:
 ```
 
 `management.metrics.use-global-registry=false` でデフォルトで使える全モニタリングシステムを無効にします。  
+`management.metrics.export.cloudwatch.namespace=Micrometer/test` ネームスペースを `Micrometer/test` にします。
+`management.metrics.export.cloudwatch.enable=true` MicrometerでCloud Watchを使うための設定をAutoConfigurationで設定してもらいます。
+`management.metrics.export.cloudwatch.step=1s` メトリクスの収集間隔を1秒にします。
