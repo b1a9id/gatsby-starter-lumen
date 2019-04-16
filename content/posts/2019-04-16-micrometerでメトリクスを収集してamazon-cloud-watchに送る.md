@@ -128,3 +128,8 @@ cloud:
 `cloud.aws.*` は、spring-cloud-awsを使っているアプリケーションをローカルで起動するための設定です。spring-cloud-awsは、S3やCloudFormationなど様々なサービスと連携します。AWS環境でアプリケーションが起動していない場合、Exceptionを投げれられてアプリケーションが起動しません。  
 `cloud.aws.stack.auto=false` CloudFormationとの連携を無効にする。  
 `cloud.aws.region.auto=false` 、 `cloud.aws.region.static=ap-northeast-1` EC2のメタデータからリージョンを自動で取得せずに `ap-northeast-1` をリージョンに指定しています。  
+
+## Elastic Beanstalkにデプロイ
+Coineyでは、Elastic Beanstalkを使っているので同様の環境にデプロイします。デフォルトで55個のメトリクスが収集されます。
+
+## 
