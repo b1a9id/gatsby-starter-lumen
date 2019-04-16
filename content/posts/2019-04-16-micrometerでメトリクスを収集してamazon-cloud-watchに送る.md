@@ -154,4 +154,9 @@ public class HeapMemoryUsageMetrics {
 }
 ```
 
-特に難しいことはしていないです。 AWS環境以外では、このクラスのインスタンスをBean登録する必要がないので、 `@ConditionalOnAwsCloudEnvironment` をつけて、AWS環境のときのみBean登録します。
+特に難しいことはしていないです。 AWS環境以外では、このクラスのインスタンスをBean登録する必要がないので、 `@ConditionalOnAwsCloudEnvironment` をつけて、AWS環境のときのみBean登録します。ちなみに、 `@ConditionalOnAwsCloudEnvironment` は、EC2のメタデータからインスタンスIDを取得できたらAWS環境とみなしているようです。  
+
+先ほどと同様にElastic Beanstalkにデプロイして、 Cloud Watchで確認すると、メトリクスが送られていることが確認できます。
+
+
+今回実装したコードは、 [GitHub](https://github.com/b1a9id/micrometer-cloudwatch-sample)においてあります。
