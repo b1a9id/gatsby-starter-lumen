@@ -132,4 +132,26 @@ cloud:
 ## Elastic Beanstalkにデプロイ
 Coineyでは、Elastic Beanstalkを使っているので同様の環境にデプロイします。デフォルトで55個のメトリクスが収集されます。
 
-## 
+## 独自Metricsクラスを実装
+`management.metrics.enable.xx=false` のように書くことで不要なメトリクスを収集しないようにできます。（xxは、メトリクス名のプレフィックスでjvmやtomcatなどがあります）  
+
+今回は、ヒープの使用量のメトリクスを収集する独自Metricsクラスを実装します。
+
+```
+@ConditionalOnAwsCloudEnvironment
+@Component
+public class HeapMemoryUsageMetrics {
+  public HeapMemoryUsageMetrics(MeterRegistry registry) {
+    Gauge.builder("HeapMemoryUsage", this, HeapMemoryUsageMetrics::invoke)
+      .tag("InstanceId", EC2MetadataUtils.getInstanceId())
+      .baseUnit("bytes")
+      .register(registry);
+  }
+  private Long invoke() {
+    MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
+      return memoryMXBean.getHeapMemoryUsage().getUsed();
+  }
+}
+```
+
+特に難しいことはしていないです。 AWS環境以外では、このクラスのインスタンスをBean登録する必要がないので、 `@ConditionalOnAwsCloudEnvironment` をつけて、AWS環境のときのみBean登録します。
