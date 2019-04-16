@@ -121,6 +121,10 @@ cloud:
 ```
 
 `management.metrics.use-global-registry=false` でデフォルトで使える全モニタリングシステムを無効にします。  
-`management.metrics.export.cloudwatch.namespace=Micrometer/test` ネームスペースを `Micrometer/test` にします。
-`management.metrics.export.cloudwatch.enable=true` MicrometerでCloud Watchを使うための設定をAutoConfigurationで設定してもらいます。
-`management.metrics.export.cloudwatch.step=1s` メトリクスの収集間隔を1秒にします。
+`management.metrics.export.cloudwatch.namespace=Micrometer/test` ネームスペースを `Micrometer/test` にします。  
+`management.metrics.export.cloudwatch.enable=true` MicrometerでCloud Watchを使うための設定をAutoConfigurationで設定してもらいます。  
+`management.metrics.export.cloudwatch.step=1s` メトリクスの収集間隔を1秒にします。  
+
+`cloud.aws.*` は、spring-cloud-awsを使っているアプリケーションをローカルで起動するための設定です。spring-cloud-awsは、S3やCloudFormationなど様々なサービスと連携します。AWS環境でアプリケーションが起動していない場合、Exceptionを投げれられてアプリケーションが起動しません。  
+`cloud.aws.stack.auto=false` CloudFormationとの連携を無効にする。  
+`cloud.aws.region.auto=false` 、 `cloud.aws.region.static=ap-northeast-1` EC2のメタデータからリージョンを自動で取得せずに `ap-northeast-1` をリージョンに指定しています。  
