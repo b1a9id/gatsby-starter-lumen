@@ -2,7 +2,7 @@
 template: post
 title: SpringBoot1系から2系に移行しててハマった点
 slug: /posts/migrate-from-boot1-to-boot2/
-draft: false
+draft: true
 date: '2018-12-14T12:23:32.169Z'
 description: >-
   Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。ついでなので2.0.x -> 2.1.xで変更された点もまとめます。
@@ -40,6 +40,24 @@ bootJar {
 }
 ```
 
+### バージョンアップ
+2系では、Gradle 4.x以上がマストです。
+```groovy
+wrapper {
+    gradleVersion = "4.10.2"
+    distributionType = Wrapper.DistributionType.ALL
+}
+```
+
+コマンドを実行  
+`./gradlew wrapper`
+
+- [Upgrading your build from Gradle 4.x to 5.0](https://docs.gradle.org/5.0/userguide/upgrading_version_4.html) を参考にやってく
+
+- Gradle 4.7からcompileとかruntimeなどが非推奨になってる
+[参考](https://docs.gradle.org/4.7/userguide/java_plugin.html#sec:java_plugin_and_dependency_management)
+
+
 # actuator
 ## エンドポイントプレフィックス
 ### 1
@@ -66,4 +84,14 @@ bootJar {
     <!-- configuration to be enabled when the "dev" or "staging" profiles are active -->
 </springProfile>
 ```
+
+# Lombok
+## Gradle 4.9でlombok.javac.apt.LombokProcessor could not be initialized
+Lombokのバージョンを `1.18.2` にする。 [参考](https://stlisacity.hatenablog.com/entry/2018/08/27/123258)
+
+## Gradle 5.0からはアノテーションプロセッサをコンパイル時のクラスパスから取得する方法がサポートされない
+
+```
+
+
 
