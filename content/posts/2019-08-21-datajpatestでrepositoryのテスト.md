@@ -2,7 +2,7 @@
 template: post
 title: '@DataJpaTestでRepositoryのテスト'
 slug: /posts/data-jpa-test
-draft: true
+draft: false
 date: 2019-08-21T02:14:36.394Z
 description: >-
 
