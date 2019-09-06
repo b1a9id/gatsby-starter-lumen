@@ -114,6 +114,7 @@ Lombokのバージョンを `1.18.2` にする。 [参考](https://stlisacity.ha
 ## MockitoJUnitRunnerのパッケージ変更
 `org.mockito.runners.MockitoJUnitRunner` -> `org.mockito.junit.MockitoJUnitRunner`
 
+
 ## JUnit 5.4.2から追加する依存関係減った
 - [junit5-samples/junit5-jupiter-starter-gradle/build.gradle](https://github.com/junit-team/junit5-samples/blob/r5.4.2/junit5-jupiter-starter-gradle/build.gradle#L12)
 
