@@ -1,6 +1,6 @@
 ---
 template: post
-title: SpringBoot1系から2系に移行しててハマった点
+title: SpringBoot1系から2系に移行した
 slug: /posts/migrate-from-boot1-to-boot2/
 draft: true
 date: '2018-12-14T12:23:32.169Z'
@@ -13,8 +13,7 @@ tags:
   - Spring Boot
 ---
 
-Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。ついでなので2.0.x -> 2.1.xで変更された点もまとめます。
-変更点見つけたら随時書いていこうと思います。
+Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。変更点見つけたら随時書いていこうと思います。
 移行前のSpring Bootのバージョンは<b>1.5.10</b>です。2系のバージョンは、<b>2.1.1（2018/12/14時点の最新）</b>です。
 
 # Web
@@ -33,14 +32,14 @@ bootRepackage {
 
 ### 2
 bootJarタスクで実行可能jarを作ります。jarタスクは無効になっているようです。
-[https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/gradle-plugin/reference/html/#packaging-executable-and-normal](https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/gradle-plugin/reference/html/#packaging-executable-and-normal)
+[https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/gradle-plugin/reference/html/#packaging-executable-and-normal](https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/gradle-plugin/reference/html/#packaging-executable-and-normal)
 ```
 bootJar {
     launchScript()
 }
 ```
 
-### バージョンアップ
+## バージョンアップ
 2系では、Gradle 4.x以上がマストです。
 ```groovy
 wrapper {
@@ -57,6 +56,10 @@ wrapper {
 - Gradle 4.7からcompileとかruntimeなどが非推奨になってる
 [参考](https://docs.gradle.org/4.7/userguide/java_plugin.html#sec:java_plugin_and_dependency_management)
 
+## jarの名前を変更する
+`jar.baseName='hoge'` ->  bootJarタスク内で `archivesBaseName='hoge'`
+
+- [Jar](https://docs.gradle.org/current/dsl/org.gradle.api.tasks.bundling.Jar.html)
 
 # actuator
 ## エンドポイントプレフィックス
@@ -91,7 +94,10 @@ Lombokのバージョンを `1.18.2` にする。 [参考](https://stlisacity.ha
 
 ## Gradle 5.0からはアノテーションプロセッサをコンパイル時のクラスパスから取得する方法がサポートされない
 
-```
+# Test
+## MockitoJUnitRunnerのパッケージ変更
+`org.mockito.runners.MockitoJUnitRunner` -> `org.mockito.junit.MockitoJUnitRunner`
+
 
 
 
