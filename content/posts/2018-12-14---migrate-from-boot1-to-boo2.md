@@ -2,19 +2,18 @@
 template: post
 title: SpringBoot1系から2系に移行した
 slug: /posts/migrate-from-boot1-to-boot2/
-draft: true
+draft: false
 date: '2018-12-14T12:23:32.169Z'
 description: >-
   Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。ついでなので2.0.x -> 2.1.xで変更された点もまとめます。
-  変更点見つけたら随時書いていこうと思います。 移行前のSpring
-  Bootのバージョンは1.5.10です。2系のバージョンは、2.1.1（2018/12/14時点の最新）です。
+  変更点見つけたら随時書いていこうと思います。 移行前のSpring Bootのバージョンは1.5.10です。
 category: Spring Boot
 tags:
   - Spring Boot
 ---
 
 Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。変更点見つけたら随時書いていこうと思います。
-移行前のSpring Bootのバージョンは<b>1.5.10</b>です。2系のバージョンは、<b>2.1.1（2018/12/14時点の最新）</b>です。
+移行前のSpring Bootのバージョンは<b>1.5.10</b>です。
 
 # 参考にしたドキュメント
 - 1.4.x -> 1.5.x
