@@ -14,7 +14,7 @@ tags:
 # Micrometerとは？
 
 Micrometerとは、Pivotal社が作っているJVMベースのアプリケーションのためのメトリクスライブラリです。メトリクスの収集とモニタリングシステムへの通知を行います。\
-メトリスクの収集(micrometer-core)とモニタリングシステムへの通知(micrometer-registry-xxx)が切り離されているので、モニタリングシステムに依存しません。
+メトリクスの収集(micrometer-core)とモニタリングシステムへの通知(micrometer-registry-xxx)が切り離されているので、モニタリングシステムに依存しません。
 
 ## Micrometerを使う上で押さえておくべきクラス
 
