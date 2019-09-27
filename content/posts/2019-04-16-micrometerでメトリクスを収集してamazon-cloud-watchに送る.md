@@ -174,3 +174,7 @@ public class HeapMemoryUsageMetrics {
 ![custom_metrics](/media/スクリーンショット-2019-04-13-13.48.02.png)
 
 今回実装したコードは、 [GitHub](https://github.com/b1a9id/micrometer-cloudwatch-sample)においてあります。
+
+# 参考
+- [Spring Boot公式リファレンス](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-metrics)
+- [Micrometer Spring Boot アプリケーションのモニタリング](https://qiita.com/kimullaa/items/ae9d18af6784f82d1a5f)
