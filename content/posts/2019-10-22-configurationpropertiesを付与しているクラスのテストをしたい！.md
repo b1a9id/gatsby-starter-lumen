@@ -57,6 +57,5 @@ class ConfigurationPropertyTest {
 ```
 - `@ContextConfiguration(classes = {TestConfig.class}, initializers = ConfigFileApplicationContextInitializer.class)`
   - `classes = {TestConfig.class}` は、TestConfigクラスを適用します。
-  - `initializers = ConfigFileApplicationContextInitializer.class` は、設定ファイルを読み込んでくれます。
-
+  - `initializers = ConfigFileApplicationContextInitializer.class` は、設定ファイルを読み込んでくれます。[公式リファレンス](https://docs.spring.io/spring-boot/docs/2.2.0.RELEASE/reference/html/spring-boot-features.html#boot-features-configfileapplicationcontextinitializer-test-utility)  
 
