@@ -36,9 +36,10 @@ TestConfig.java
 public class TestConfig {}
 ```
 
-ポイントは、 `@EnableConfigurationProperties` です。このアノテーションは、
+- `@EnableConfigurationProperties` 
+  - 指定した `@ConfigurationProperties` が付与されたクラスをBean登録してくれます。
 
-ConfigurationPropertyTest  
+ConfigurationPropertyTest.java  
 ```
 @ExtendWith(SpringExtension.class)
 @TestPropertySource(properties = "spring.config.name=app")
@@ -54,4 +55,8 @@ class ConfigurationPropertyTest {
 	}
 }
 ```
+- `@ContextConfiguration(classes = {TestConfig.class}, initializers = ConfigFileApplicationContextInitializer.class)`
+  - `classes = {TestConfig.class}` は、TestConfigクラスを適用します。
+  - `initializers = ConfigFileApplicationContextInitializer.class` は、設定ファイルを読み込んでくれます。
+
 
