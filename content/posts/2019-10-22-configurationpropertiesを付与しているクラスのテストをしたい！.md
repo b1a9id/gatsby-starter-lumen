@@ -94,3 +94,21 @@ TestConfig.java
 @EnableConfigurationProperties
 public class TestConfig {}
 ```
+
+ConfigurationPropertiesTest.java
+```
+@ExtendWith(SpringExtension.class)
+@TestPropertySource(properties = "spring.config.name=app")
+@ContextConfiguration(classes = {TestConfig.class}, initializers = ConfigFileApplicationContextInitializer.class)
+class ConfigurationPropertyTest {
+
+	@Autowired
+	private AppAppProperties appAppProperties;
+
+	@Test
+	void getValue() {
+		assertEquals("uchitate", appAppProperties.getName());
+	}
+}
+```
+
