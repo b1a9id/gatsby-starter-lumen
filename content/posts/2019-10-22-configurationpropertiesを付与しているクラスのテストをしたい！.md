@@ -59,3 +59,38 @@ class ConfigurationPropertyTest {
   - `classes = {TestConfig.class}` は、TestConfigクラスを適用します。
   - `initializers = ConfigFileApplicationContextInitializer.class` は、設定ファイルを読み込んでくれます。[公式リファレンス](https://docs.spring.io/spring-boot/docs/2.2.0.RELEASE/reference/html/spring-boot-features.html#boot-features-configfileapplicationcontextinitializer-test-utility)  
 
+## おまけ（メソッドに `@ConfigurationProperties` を付与している場合）
+app.properties
+```
+app.app.name=uchitate
+```
+
+AppAppProperties.java
+```
+public class AppAppProperties {
+	private String name;
+
+	// getterとsetterは省略
+}
+```
+
+AppAppConfig.java
+```
+@Configuration
+public class AppAppConfig {
+
+	@Bean
+	@ConfigurationProperties("app.app")
+	public AppAppProperties appAppProperties() {
+		return new AppAppProperties();
+	}
+}
+```
+
+TestConfig.java
+```
+@TestConfiguration
+@Import(AppAppConfig.class)
+@EnableConfigurationProperties
+public class TestConfig {}
+```
