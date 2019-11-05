@@ -3,7 +3,7 @@ template: post
 title: ユニットテストで@ConfigurationPropertiesが有効になるようにしたい！
 slug: /posts/configuration-properties-test
 draft: true
-date: 2019-10-21T20:10:08.677Z
+date: 2019-11-05T16:03:00.000Z
 description: ユニットテストで@ConfigurationPropertiesが有効になるようにしたい！
 category: Test
 tags:
@@ -94,6 +94,8 @@ TestConfig.java
 @EnableConfigurationProperties
 public class TestConfig {}
 ```
+- `@Import` でConfigクラスをBean登録する
+- `@EnableConfigurationProperties` で設定ファイルの値を AppAppConfigクラスにセットする
 
 ConfigurationPropertiesTest.java
 ```
@@ -111,4 +113,6 @@ class ConfigurationPropertyTest {
 	}
 }
 ```
+
+テストクラスは、AppPropertiesのテストとほぼ同じです
 
