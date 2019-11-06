@@ -2,17 +2,21 @@
 template: post
 title: ユニットテストで@ConfigurationPropertiesが有効になるようにしたい！
 slug: /posts/configuration-properties-test
-draft: true
-date: 2019-11-05T16:03:00.000Z
-description: ユニットテストで@ConfigurationPropertiesが有効になるようにしたい！
+draft: false
+date: 2019-11-06T16:03:00.000Z
+description: >-
+  `@SpringBootTest`
+  を使ってテスト書けば設定ファイルを読み込んでくれるので悩む必要はないんですけど、大人の事情でそういうことができない場合もありますよね。そうすると当然、設定ファイルを読み込んでくれないわけです。
+
+  今回、`@SpringBootTest` を使ってテストを書かなくても設定ファイルを読み込めるようなテストを書きました。
 category: Test
 tags:
   - SpringBoot
 ---
-ユニットテストで設定ファイル読み込んでくれないのなんでだろうから全てははじまりました。
-`@SpringBootTest` を使ってテストすれば設定ファイルを読み込んでくれるので悩む必要はないんですけど、大人の事情で `@InjectMocks` を使ってテストの対象のクラスをインスタンス化して...というテストを書くこともあるかと思います。そうすると当然、設定ファイルを読み込んでくれないわけです。  
+ここ数年で何回かぶち当たってたことが解決したので備忘録として。内容はタイトルの通りです。
+`@SpringBootTest` を使ってテスト書けば設定ファイルを読み込んでくれるので悩む必要はないんですけど、大人の事情でそういうことができない場合もありますよね。そうすると当然、設定ファイルを読み込んでくれないわけです。
 
-今回、次のようなテストを書きました。  
+今回、`@SpringBootTest` を使ってテストを書かなくても設定ファイルを読み込めるようなテストを書きました。  
 
 app.properties
 ```
@@ -37,7 +41,7 @@ public class TestConfig {}
 ```
 
 - `@EnableConfigurationProperties` 
-  - 指定した `@ConfigurationProperties` が付与されたクラスをBean登録してくれます。
+  - `@ConfigurationProperties` が付与されたクラスに設定ファイルの値をセットする
 
 ConfigurationPropertyTest.java  
 ```
@@ -95,7 +99,6 @@ TestConfig.java
 public class TestConfig {}
 ```
 - `@Import` でConfigクラスをBean登録する
-- `@EnableConfigurationProperties` で設定ファイルの値を AppAppConfigクラスにセットする
 
 ConfigurationPropertiesTest.java
 ```
@@ -114,5 +117,13 @@ class ConfigurationPropertyTest {
 }
 ```
 
-テストクラスは、AppPropertiesのテストとほぼ同じです
+テストクラスは、AppProperties.javaのテストとほぼ同じです
 
+
+今回の環境
+```
+Java11
+Spring Boot 2.2.RELEASE
+```
+
+今回のソースコードは[こちら](https://github.com/b1a9id/spring-boot2-sandbox/tree/hotfix/test-configuration-properties)
