@@ -36,7 +36,7 @@ Consumer（サービスを使う側）が定義したContract（契約）をProv
 - ProducerとConsumerを実装
 - Spring Cloud Contractを使ってCDC testingできるようにする
 
-サンプルは、Java13、Spring Boot2.2.1で作っています。
+サンプルは、Java13、Spring Boot2.2.0で作っています。
 
 # Producer
 ## Controllerの実装
