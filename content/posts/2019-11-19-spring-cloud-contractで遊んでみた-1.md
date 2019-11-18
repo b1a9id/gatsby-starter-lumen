@@ -105,6 +105,7 @@ TestBase.java
 ```
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
+// DIコンテナを破棄するタイミングをコントロールする
 @DirtiesContext
 public abstract class TestBase {
   @BeforeEach
@@ -114,7 +115,6 @@ public abstract class TestBase {
   }
 }
 ```
-- `@DirtiesContext` ：DIコンテナを破棄するタイミングをコントロールする
 
 ## Contractを追加
 GroovyかYAMLで記述します。デフォルトのパスは、 `$rootDir/src/test/resources/contracts` です。
