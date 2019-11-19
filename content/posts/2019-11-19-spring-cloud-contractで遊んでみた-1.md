@@ -3,11 +3,11 @@ template: post
 title: 'Spring Cloud Contractで遊んでみた #1'
 slug: /posts/spring-cloud-contract-1
 draft: false
-date: 2019-11-18T15:29:59.706Z
+date: 2019-11-19T02:29:00.000Z
 description: >-
-  Spring Cloud Contractを触ってみようと思ったきっかけは、会社での開発フローに問題を感じているからです。会社での開発フローは、
-  `SwaggerでAPI定義書を書く` -> `レビュー` ->
-  `実装`です。このフローには「1.実装とAPI定義書で乖離してしまう恐れがある」、「2.いちいちAPI定義書を書くのがめんどくさい」、「3.実装が仕様を満たしている保証はできない」という問題があります。
+  Spring Cloud Contractを触ってみようと思ったきっかけは、会社での `SwaggerでAPI定義書を書く` -> `レビュー` ->
+  `実装` という開発フロー問題を感じているからです。  このフローには **1.実装とAPI定義書で乖離してしまう恐れがある** 、
+  **2.いちいちAPI定義書を書くのがめんどくさい** 、 **3.実装が仕様を満たしている保証はできない** という問題があります。
 category: TEST
 tags:
   - SpringCloudContract
@@ -16,8 +16,8 @@ Spring Cloud Contractを触ってみようと思ったきっかけは、会社�
 このフローには **1.実装とAPI定義書で乖離してしまう恐れがある** 、 **2.いちいちAPI定義書を書くのがめんどくさい** 、 **3.実装が仕様を満たしている保証はできない** という問題があります。
 
 そこで、実装とAPI定義書が乖離しないいい感じのライブラリを探してたら、「Spring Fox」と「Spring REST Docs」が見つかりました。しかし、どちらもコードからAPI定義書を生成してくれるライブラリなのですが、微妙だなと感じました。
-Spring Foxは、公式でないしプロダクトコードに手を加えないといけないのは嫌です。Spring REST Docsは理想に近かったのですが、TDD向きで今から始めるには辛いかなと。  
-このような相談を知り合いのエンジニアに話したら、Spring Cloud Contractがあるよと教えてくれました。
+Spring Foxは、公式でないしプロダクトコードに手を加えないといけないです。Spring REST Docsは理想に近かったのですが、TDD向きで今から始めるには辛いかなと。  
+このような相談を知り合いのエンジニアに話したら、「Spring Cloud Contract」があるよと教えてくれました。
 
 # Spring Cloud Contractとは
 Spring Cloud Contractは、CDC(Consumer Driven Contracts)をサポートするためのプロジェクトでマイクロサービス化されたアプリケーションに嬉しいプロジェクトです。
@@ -92,7 +92,7 @@ pom.xml
   			<baseClassForTests>
   				com.b1a9idps.springcloudcontractsample.producer.TestBase
   			</baseClassForTests>
-        <!-- デフォルトがJUnit5で利用できるように（デフォルトはJUnit4） -->
+        <!-- JUnit5で利用できるように（デフォルトはJUnit4） -->
   			<testFramework>JUNIT5</testFramework>
   		</configuration>
   	</plugin>
@@ -470,7 +470,7 @@ Process finished with exit code 0
 これがテストを実行時に吐き出されるログです。テストが実行されるまでに「1. ローカルレポジトリからstubのjarをインストール」「2. 8080番ポートでモックサーバを起動」が行われています。
 
 ## まとめ
-Producer側では、Contractに基づいたテストが生成され、Consumer側で利用するためのスタブを生成してローカル（リモート）レポジトリにインストールします。Consumer側では、生成されたスタブを使ってテストを実行します。
+Producer側では、Contractに基づいたテストが生成され、Consumer側で利用するためのスタブを生成してローカルレポジトリにインストールします。Consumer側では、生成されたスタブを使ってテストを実行します。
 Spring Cloud Contractを使えば、Consumerが定義したContractをProviderが守っていることが担保できます。また、Consumerも実サービスに近いテストを行うことができます。とてもよいですね！！！
 
 長くなりすぎたので、別記事でSpring REST Docsとの連携は書きます！
