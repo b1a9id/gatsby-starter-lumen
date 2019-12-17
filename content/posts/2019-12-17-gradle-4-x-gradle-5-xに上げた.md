@@ -63,3 +63,6 @@ dependencies {
 ## おまけ
 Gradle 3.x -> 4.10.2にするときにLombokが怒ってました。Lombok 1.18.2以上にしてねとのことでした。
 [参考](https://github.com/rzwitserloot/lombok/issues/1782)
+
+Spring BootのGradleプラグイン
+実行可能Jar(or War)作成タスクが `bootRepackage` から `bootJar`、`bootWar`に変更になった。`jar`タスクや`war`タスクは呼び出されない。[参考](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Migration-Guide#building-executable-jars-and-wars)
