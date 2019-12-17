@@ -2,8 +2,8 @@
 template: post
 title: Gradle 4.x -> Gradle 5.xに上げた
 slug: /posts/versionup-gradle-5
-draft: true
-date: 2019-12-17T09:21:32.982Z
+draft: false
+date: 2019-12-18T00:00:00.000Z
 description: >-
   Spring Boot2系にあげたときにやったことをまとめようと思います。[関連記事]()今回はGradleの話です。[Upgrading your
   build from Gradle 4.x to
@@ -15,7 +15,7 @@ tags:
 ---
 Spring Boot2系にあげたときにやったことをまとめようと思います。[関連記事]()
 今回はGradleの話です。[Upgrading your build from Gradle 4.x to 5.0](https://docs.gradle.org/5.0/userguide/upgrading_version_4.html)を参考に作業しました。
-これだけじゃなかったと思うので思い出したら追記します。もうGradle 6出ているんですが、まだそんなに対応していないのでとりあえず5の話です。
+これだけじゃなかったと思うので、思い出したら追記します。もうGradle 6出ているんですが、まだそんなに対応していないのでとりあえず5の話です。
 
 ## 4系の最新までバージョンをあげる
 まず、4系の最新までバージョンをあげます。
@@ -37,7 +37,7 @@ distributionType = Wrapper.DistributionType.ALL
 `--warning-mode all` オプションをつけて実行すると詳細を確認することができます。[参考](https://docs.gradle.org/5.0/userguide/command_line_interface.html#sec:command_line_warnings)
 
 ## build.gradleの書き換え
-大きな書き換えは、dependencies指定する`compilie`を`implementation`に書き換えることでした。4.7からcompileとかruntimeなどが非推奨になっています。[参考](https://docs.gradle.org/4.7/userguide/java_plugin.html#sec:java_plugin_and_dependency_management)
+大きな書き換えは、dependencies指定する`compilie`を`implementation`に書き換えることでした。4.7からcompileとかruntimeなどが非推奨になっています。[参考](https://docs.gradle.org/4.7/userguide/java_plugin.html#sec:java_plugin_and_dependency_management)  
 `implementation`に変更することで依存関係が伝播しなくなるため明確になり、結合度が低くなります。
 
 fooモジュールとbarモジュールで構成されたマルチモジュールプロジェクトがあるとします。
@@ -62,4 +62,4 @@ dependencies {
 
 ## おまけ
 Gradle 3.x -> 4.10.2にするときにLombokが怒ってました。Lombok 1.18.2以上にしてねとのことでした。
-https://github.com/rzwitserloot/lombok/issues/1782
+[参考](https://github.com/rzwitserloot/lombok/issues/1782)
