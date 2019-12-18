@@ -5,15 +5,15 @@ slug: /posts/versionup-gradle-5
 draft: false
 date: 2019-12-18T00:00:00.000Z
 description: >-
-  Spring Boot2系にあげたときにやったことをまとめようと思います。[関連記事]()今回はGradleの話です。[Upgrading your
-  build from Gradle 4.x to
+  Spring Boot2系にあげたときにやったことをまとめようと思います。今回はGradleの話です。[Upgrading your build from
+  Gradle 4.x to
   5.0](https://docs.gradle.org/5.0/userguide/upgrading_version_4.html)を参考に作業しました。これだけじゃなかったと思うので思い出したら追記します。もうGradle
   6出ているんですが、まだそんなに対応していないのでとりあえず5の話です。
 category: Gradle
 tags:
   - Build Tool
 ---
-Spring Boot2系にあげたときにやったことをまとめようと思います。[関連記事]()
+Spring Boot2系にあげたときにやったことをまとめようと思います。[関連記事](https://note.com/b1a9idps/n/n0b9ca2ee57a2)
 今回はGradleの話です。[Upgrading your build from Gradle 4.x to 5.0](https://docs.gradle.org/5.0/userguide/upgrading_version_4.html)を参考に作業しました。
 これだけじゃなかったと思うので、思い出したら追記します。もうGradle 6出ているんですが、まだそんなに対応していないのでとりあえず5の話です。
 
