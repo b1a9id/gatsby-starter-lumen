@@ -7,13 +7,13 @@ date: 2020-01-05T06:37:07.410Z
 description: >-
   Spring Boot
   2系にあげたときにやったことをまとめようと思います。（[関連記事](https://note.com/b1a9idps/n/n0b9ca2ee57a2)） 
-  今回は、Spring Webの話です。Spring Boot 2.0.9.RELEASEに上げた話になります。2.2.xの話は気が向いたら書きます。
+  今回は、Spring Webの話です。Spring Boot 2.0.9.RELEASEに上げた話になります。2.2対応はまたいつか書きます。
 category: Upgrade
 tags:
   - SpringBoot
 ---
 Spring Boot 2系にあげたときにやったことをまとめようと思います。（[関連記事](https://note.com/b1a9idps/n/n0b9ca2ee57a2)）  
-今回は、Spring Webの話です。Spring Boot 2.0.9.RELEASEに上げた話になります。2.2.xの話は気が向いたら書きます。
+今回は、Spring Webの話です。Spring Boot 2.0.9.RELEASEに上げた話になります。2.2対応はまたいつか書きます。
 
 # 依存しているライブラリのバージョン
 Spring Bootのバージョンを`1.5.22`から`2.0.9`に上げると依存しているライブラリのバージョンが次のようになります。  
