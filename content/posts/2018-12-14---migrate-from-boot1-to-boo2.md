@@ -2,7 +2,7 @@
 template: post
 title: SpringBoot1系から2系に移行した
 slug: /posts/migrate-from-boot1-to-boot2/
-draft: false
+draft: true
 date: 2019-09-06T03:35:00.000Z
 description: >-
   Spring Boot2系に移行してハマった点について書きます。ほぼ備忘録です。ついでなので2.0.x -> 2.1.xで変更された点もまとめます。
