@@ -22,7 +22,7 @@ Spring Bootのバージョンを`1.5.22`から`2.0.9`に上げると依存して
 [Spring Boot 2.0.9.RELEASE](https://docs.spring.io/spring-boot/docs/2.0.9.RELEASE/reference/html/appendix-dependency-versions.html#appendix-dependency-versions)  
 
 # Hibernate Validator
-## `@NotBlank`, `@NotBlank`, `@Email`が非推奨になった
+## `@NotBlank`, `@NotEmpty`, `@Email`が非推奨になった
 Hibernate Validator 6.0.0.Finalから`org.hibernate.validator.constraints.NotBlank`, `org.hibernate.validator.constraints.NotEmpty`, `org.hibernate.validator.constraints.Email`が非推奨になりました。[参考](https://developer.jboss.org/wiki/HibernateValidatorMigrationGuide#jive_content_id_600Final)  
 Spring Boot 2系からはjavax-validationが提供するアノテーションを利用します。
 ```
