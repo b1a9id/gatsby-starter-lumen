@@ -12,10 +12,11 @@ category: Upgrade
 tags:
   - SpringBoot
 ---
-Spring Boot 2系にあげたときにやったことをまとめようと思います。[関連記事](https://note.com/b1a9idps/n/n0b9ca2ee57a2)
+Spring Boot 2系にあげたときにやったことをまとめようと思います。[関連記事](https://note.com/b1a9idps/n/n0b9ca2ee57a2)  
 今回は、Spring Data JPAの話です。Spring Boot 2.0.9.RELEASEに上げた話になります。2.2対応はまたいつか書きます。
 
-# 依存しているライブラリのバージョンSpring Bootのバージョンを`1.5.22`から`2.0.9`に上げると依存しているライブラリのバージョンが次のようになります。  
+# 依存しているライブラリのバージョン
+Spring Bootのバージョンを`1.5.22`から`2.0.9`に上げると依存しているライブラリのバージョンが次のようになります。  
 [Spring Boot 1.5.22.RELEASE](https://docs.spring.io/spring-boot/docs/1.5.22.RELEASE/reference/html/appendix-dependency-versions.html#appendix-dependency-versions)  
 ↓  
 [Spring Boot 2.0.9.RELEASE](https://docs.spring.io/spring-boot/docs/2.0.9.RELEASE/reference/html/appendix-dependency-versions.html#appendix-dependency-versions)  
