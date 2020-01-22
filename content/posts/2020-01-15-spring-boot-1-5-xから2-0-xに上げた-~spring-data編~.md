@@ -64,7 +64,7 @@ pom.xml
       <artifactId>spring-boot-starter-jdbc</artifactId>
       <exclusions>
           <exclusion>
-              <groupId>com.zaxxer</groupId>z
+              <groupId>com.zaxxer</groupId>
               <artifactId>HikariCP</artifactId>
           </exclusion>
       </exclusions>
