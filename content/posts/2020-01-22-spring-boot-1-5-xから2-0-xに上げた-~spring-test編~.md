@@ -2,8 +2,8 @@
 template: post
 title: Spring Boot 1.5.xから2.0.xに上げた ~Spring Test編~
 slug: /posts/versionup-spring-boot-test-1-to-2
-draft: true
-date: 2020-01-21T16:04:33.448Z
+draft: false
+date: 2020-01-22T01:33:00.000Z
 description: |-
   Spring Boot 2系にあげたときにやったことをまとめようと思います。関連記事
   今回は、Testingの話です。Spring Boot 2.0.9.RELEASEに上げた話になります。2.2対応はまたいつか書きます。
