@@ -4,14 +4,14 @@ title: About me
 slug: /pages/about
 draft: false
 ---
-### 所属
+## 所属
 
 * [コイニー株式会社](https://coiney.com/corp/about/)
 * [日本Javaユーザグループ](http://www.java-users.jp/)
 * [株式会社デファクトスタンダード(Fashion Charity Project)](https://www.waja.co.jp/fcp/)
 * [株式会社scrap&build（トライアングルソース）](https://www.triangle-sauce.com/)
 
-### 職歴
+## 職歴
 ### コムチュア株式会社（2014/4 ~ 2015/4）
 - システムエンジニア
   - 統合監視ツールの導入
@@ -38,14 +38,14 @@ draft: false
   - トライアングルソース業務支援
   - トライアングルソースECサイト構築
 
-### スキル
+## スキル
 
 * Java8 ~
 * Spring Framework, Spring Boot
 * AWS
 * Vue.js(独学)
 
-### SNS
+## SNS
 
 * [Twitter](https://twitter.com/b1a9idps)
 * [GitHub](https://github.com/b1a9id)
