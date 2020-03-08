@@ -2,7 +2,7 @@
 template: page
 title: About me
 slug: /pages/about
-draft: true
+draft: false
 ---
 ### 所属
 
