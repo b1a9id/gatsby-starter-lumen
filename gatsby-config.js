@@ -93,6 +93,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'b1a9id',
+              includeDefaultCss: true
+            }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: { maxWidth: 960 }
           },

@@ -967,7 +967,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -3134,6 +3134,13 @@ async-retry-ng@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/async-retry-ng/-/async-retry-ng-2.0.1.tgz#f5285ec1c52654a2ba6a505d0c18b1eadfaebd41"
   integrity sha512-iitlc2murdQ3/A5Re3CcplQBEf7vOmFrFQ6RFn3+/+zZUyIHYkZnnEziMSa6YIb2Bs2EJEPZWReTxjHqvQbDbw==
+
+async-unist-util-visit@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/async-unist-util-visit/-/async-unist-util-visit-1.0.0.tgz#115c808ef2a5ac6695b691dbb731bbb0ca00e852"
+  integrity sha1-EVyAjvKlrGaVtpHbtzG7sMoA6FI=
+  dependencies:
+    run-async "2.2.0"
 
 async@1.5.2:
   version "1.5.2"
@@ -7783,6 +7790,17 @@ gatsby-remark-copy-linked-files@^2.3.12:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-embed-gist@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-gist/-/gatsby-remark-embed-gist-1.2.1.tgz#d6cc1c48b7670df59e51adecfa910a02e452bf7f"
+  integrity sha512-kBUHsjCObbdejhZ0n+roNe1iAWVj4l7yWLKMNDbTEmVklLcFRuv4koPUruTye1Hxv5j97A/l6aKk1ka2AZ9Wkg==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    async-unist-util-visit "^1.0.0"
+    cheerio "^1.0.0-rc.3"
+    node-fetch "^2.6.0"
+    parse-numeric-range "^1.2.0"
+
 gatsby-remark-images@^3.3.27:
   version "3.3.27"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.3.27.tgz#21483d1c03d5db6380f775ab477c70e7e8b3f2b3"
@@ -10045,6 +10063,11 @@ is-potential-custom-element-name@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.0.tgz#0c52e54bcca391bb2c494b21e8626d7336c6e397"
   integrity sha1-DFLlS8yjkbssSUsh6GJtczbG45c=
+
+is-promise@^2.1.0:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.2.2.tgz#39ab959ccbf9a774cf079f7b40c7a26f763135f1"
+  integrity sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
 
 is-regex@^1.0.4, is-regex@^1.1.0, is-regex@^1.1.1:
   version "1.1.1"
@@ -13306,6 +13329,11 @@ parse-numeric-range@^0.0.2:
   resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz#b4f09d413c7adbcd987f6e9233c7b4b210c938e4"
   integrity sha1-tPCdQTx6282Yf26SM8e0shDJOOQ=
 
+parse-numeric-range@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-1.2.0.tgz#aa70b00f29624ed13e9f943e9461b306e386b0fa"
+  integrity sha512-1q2tXpAOplPxcl8vrIGPWz1dJxxfmdRkCFcpxxMBerDnGuuHalOWF/xj9L8Nn5XoTUoB/6F0CeQBp2fMgkOYFg==
+
 parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
@@ -15707,6 +15735,14 @@ rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==
+
+run-async@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.2.0.tgz#8783abd83c7bb86f41ee0602fc82404b3bd6e8b9"
+  integrity sha1-h4Or2Dx7uG9B7gYC/IJASzvW6Lk=
+  dependencies:
+    is-promise "^2.1.0"
+    pinkie-promise "^2.0.0"
 
 run-async@^2.2.0, run-async@^2.4.0:
   version "2.4.1"
