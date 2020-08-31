@@ -48,7 +48,7 @@
     "gatsby-plugin-manifest": "^2.4.23",
     "gatsby-plugin-netlify": "^2.3.13",
     "gatsby-plugin-netlify-cms": "^4.3.11",
-    "gatsby-plugin-offline": "^3.2.25",
+    "gatsby-plugin-offline": "^3.2.26",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.27",
