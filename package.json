@@ -56,7 +56,7 @@
     "gatsby-plugin-twitter": "^2.3.10",
     "gatsby-remark-copy-linked-files": "^2.3.12",
     "gatsby-remark-embed-gist": "^1.2.1",
-    "gatsby-remark-images": "^3.3.27",
+    "gatsby-remark-images": "^3.3.28",
     "gatsby-remark-prismjs": "^3.5.10",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-remark-responsive-iframe": "^2.4.12",
