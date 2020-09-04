@@ -62,4 +62,4 @@ SakeController.java
 ## 実行結果
 アプリケーションを起動してcurlでAPIを叩いた結果です。
 
-`gist:b1a9id/27fb717f92af1fc9766562fa513305a0?file=SakeClient.java`
+`gist:b1a9id/cc1bdf6a6ebfde988a995bb4c2efa6f4?file=result.txt`
