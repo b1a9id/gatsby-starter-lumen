@@ -1,12 +1,12 @@
 ---
 template: post
-title: springdoc-openapiでAPI Specを生成する
+title: springdoc-openapiでOpenAPI形式のAPIドキュメントを生成する
 slug: /posts/springdoc-openapi-1
 draft: false
 date: 2020-09-13T16:05:02.531Z
 description: >-
   springdoc-openapiは、Spring
-  Bootを利用しているプロジェクトで簡単にOpenAPIのドキュメントを生成してくれるライブラリです。  
+  Bootを利用しているプロジェクトで簡単にOpenAPI形式のAPIドキュメントを生成してくれるライブラリです。  
 
   Web MVC, WebFluxともに対応しているようです。  
 
@@ -16,17 +16,17 @@ tags:
   - SpringDocOpenApi
 ---
 こんにちは！
-みなさん、API Spec書いてますか？私はお仕事で、OpenAPI(Swagger)を使って書いています！
+みなさん、API Spec書いてますか？私はお仕事で、OpenAPI(Swagger)形式のYAMLを書いています！
 
 ソースコードとドキュメントを別にしてしまうと、実装途中で仕様変更になったときにyml書き直すのが手間だったり、APIの実装と合ってない箇所があったりなどの問題が発生してしまいます。（そもそもyml書くの辛いし）  
 
-プロダクションコードに手を加えることなくプロダクションコードをベースにAPI Specを吐き出すライブラリを探していました。  
+プロダクションコードに手を加えることなくプロダクションコードをベースにOpenAPI形式のAPIドキュメントを吐き出すライブラリを探していました。  
 いくつかそれっぽいライブラリはあるのですが、プロダクトションコードに設定書かないといけなかったり、テストに設定書かないといけないし（テストコードが全部あるわけじゃない）で要望を完全に満たしてもらえませんでした...  
 最近、完全に要望を満たしてくれる [springdoc-openapi](https://springdoc.org) というライブラリを見つけましたので紹介します！！！！！
 
 ## springdoc-openapiとは
 
-springdoc-openapiは、Spring Bootを利用しているプロジェクトで簡単にOpenAPIのドキュメントを生成してくれるライブラリです。  
+springdoc-openapiは、Spring Bootを利用しているプロジェクトで簡単にOpenAPI形式のAPIドキュメントを生成してくれるライブラリです。  
 Web MVC, WebFluxともに対応しているようです。  
 
 ```
@@ -79,7 +79,7 @@ build.gradle\
 
 ![open-api.html](/media/openapi-html.png)
 
-これだけで、API Specが生成されるなんて感動しませんか？\
+これだけで、APIドキュメントが生成されるなんて感動しませんか？\
 Controllerクラスや`@RestControllerAdvice`が付与されているクラスの`@ExceptionHandler`を読み取ってレスポンスに適用してくれます。  
 
 `@NotNull`、 `@NotBlank`、 `@Size`、 `@Min`、 `@Max` のような、JSR-303 Bean Validationのアノテーションについても適用してくれます。
@@ -107,6 +107,6 @@ Controllerクラスや`@RestControllerAdvice`が付与されているクラス�
 - [サンプルコード(GitHub)](https://github.com/b1a9id/open-api-sample)
 
 ## まとめ
-特に設定なしにAPI Specを生成してくるのはとてもよいですね。
+特に設定なしにAPIドキュメントを生成してくるのはとてもよいですね。
 気になったところは、タグがController名のケバブケースになってしまうところですが、 `@Tag(name="sake")` をControllerに付与してあげれば変更は可能でした。
 springdoc-openapiでフロント、モバイルチームとのコミュニケーションが円滑に進みそうです！
