@@ -88,8 +88,7 @@ Controllerクラスや`@RestControllerAdvice`が付与されているクラス�
 
 ### カスタマイズ
 
-`application.properties` に書けば、デフォルト設定を変更できます。　　
-設定値一覧は、[springdoc-properties](https://springdoc.org/springdoc-properties.html)を参考にしてください。
+`application.properties` に書けば、デフォルト設定を変更できます。設定値一覧は、[springdoc-properties](https://springdoc.org/springdoc-properties.html)を参考にしてください。
 
 設定値の抜粋です。値はデフォルト値です。
 
