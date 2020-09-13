@@ -108,5 +108,5 @@ Controllerクラスや`@RestControllerAdvice`が付与されているクラス�
 
 ## まとめ
 特に設定なしにAPI Specを生成してくるのはとてもよいですね。
-気になったところは、タグがController名のスネークケースになってしまうところですが、 `@Tag(name="sake")` をControllerに付与してあげれば変更は可能でした。
+気になったところは、タグがController名のケバブケースになってしまうところですが、 `@Tag(name="sake")` をControllerに付与してあげれば変更は可能でした。
 springdoc-openapiでフロント、モバイルチームとのコミュニケーションが円滑に進みそうです！
