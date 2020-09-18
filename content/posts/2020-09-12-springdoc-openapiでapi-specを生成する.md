@@ -75,7 +75,7 @@ build.gradle\
 `GET http://localhost:8080/v3/api-docs.yaml`\
 `gist:b1a9id/0ac72e5e23a343ed642a53c4e2bdbcd1?file=openapi.yaml`  
 
-`GET http://localhost:8080/swagger-ui.html`  
+`GET http://localhost:8080/swagger-ui.html(GET http://localhost:8080/swagger-ui/index.html)`  
 
 ![open-api.html](/media/openapi-html.png)
 
