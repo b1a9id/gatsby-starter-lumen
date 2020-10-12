@@ -13,9 +13,7 @@ tags:
 Spring Bootのアプリケーション起動時に、AWS Systems Manager パラメータストアからパラメータを取得できるみたいなので試してみました。
 
 ## AWS Systems Manager パラメータストアとは
-設定データ管理と機密管理のための安全な階層型ストレージを提供してくれていて、パスワード、データベース文字列、AMI ID、ライセンスコードなどのデータをパラメータ値として保存できます。値はプレーンテキストまたは暗号化されたデータとして保存できます。
-
-詳しい説明は、[公式ドキュメント](https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manager-parameter-store.html)を見てください。
+設定データ管理と機密管理のための安全な階層型ストレージを提供してくれていて、パスワード、データベース文字列、AMI ID、ライセンスコードなどのデータをパラメータ値として保存できます。値はプレーンテキストまたは暗号化されたデータとして保存できます。詳しい説明は、[公式ドキュメント](https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manager-parameter-store.html)を見てください。
 
 ## サンプル
 ### 環境
