@@ -62,22 +62,22 @@ build.gradle\
 `gist:b1a9id/3ed18a10c04b15c797e7ab3c63e3fb36?file=build.gradle`
 
 ### 設定ファイル
-appliaction.yml(application.properties)には特に何も書かなくてOKですが、bootstrap.ymlにいくつかパラメータを書く必要があります。
+appliaction.yml(application.properties)には特に何も書かなくてOKですが、bootstrap.ymlにいくつか設定を書く必要があります。
 
-application.ymlの全体\
-`gist:b1a9id/048a8364381da15e14eb0833dbae92a0?file=application.yml`
+bootstrap.ymlの全体\
+`gist:b1a9id/048a8364381da15e14eb0833dbae92a0?file=bootstrap.yml`
 
 パラメータストアから取得するのでkeyのみ書きます。\
-`gist:b1a9id/e5995036d6399105890df54fab6ee8a4?file=application.yml`
+`gist:b1a9id/e5995036d6399105890df54fab6ee8a4?file=bootstrap.yml`
 
 ローカル環境でSpring Cloud AWSを使うためのおまじないです。アプリケーション起動時にメタデータからリージョン等を取得するのですが、ローカル環境だと取得に失敗してアプリケーションが起動しなくなってしまうために無効にしています。詳しくは、[Configuring region](https://docs.spring.io/spring-cloud-aws/docs/2.2.4.RELEASE/reference/html/#configuring-region) と [CloudFormation configuration in Spring Boot](https://docs.spring.io/spring-cloud-aws/docs/2.2.4.RELEASE/reference/html/#cloudformation-configuration-in-spring-boot) にあります。\
-`gist:b1a9id/749e8a4f08b64261116b3e93f78f4c0c?file=application.yml`
+`gist:b1a9id/749e8a4f08b64261116b3e93f78f4c0c?file=bootstrap.yml`
 
 spring-cloud-starter-aws-parameter-store-configの設定です。
-`gist:b1a9id/e7fc42aa00fac04bcfe41d75f6034870?file=application.yml`
+`gist:b1a9id/e7fc42aa00fac04bcfe41d75f6034870?file=bootstrap.yml`
 
 EC2MetadataUtilsがAWS上で動いているか取得しますが、AWS環境以外でのアプリケーション起動時にエラーログを出してしまって気持ち悪いので設定します。（なくても動作には何も問題ないです）
-`gist:b1a9id/b256f8b182cdf71c537e0d513acf7dfc?file=application.yml`
+`gist:b1a9id/b256f8b182cdf71c537e0d513acf7dfc?file=bootstrap.yml`
 
 ### アプリケーションの起動
 あとはアプリケーションを起動するだけです。
