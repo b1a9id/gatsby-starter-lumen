@@ -1,10 +1,10 @@
 ---
 template: post
-title: Spring Boot で AWS Systems Manager パラメータストアを利用する
+title: Spring BootアプリケーションでAWS Systems Manager パラメータストアを利用する
 slug: /posts/spring-boot-parameter-store
-draft: true
-date: 2020-10-11T07:19:06.861Z
-description: Spring BootのアプリケーションでAWS System Manager パラメータストアを利用して、値を取得する。
+draft: false
+date: 2020-10-12T08:28:31.435Z
+description: Spring BootアプリケーションでAWS System Manager パラメータストアを利用して、値を取得する。
 category: Config
 tags:
   - Spring Boot
@@ -105,6 +105,7 @@ logging:
 
 #### パラメータストアへの登録
 パラメータストアへの登録の仕方については上で説明したので省略します。
+これらを登録します。
 
 | key | value |
 | --- | --- |
@@ -113,13 +114,16 @@ logging:
 | /config/sample_test/spring.datasource.password | test |
 
 #### アプリケーションの起動
-アクティブプロファイルをtestにして、起動するだけです。
+アクティブプロファイルをtestにして、起動するだけで、 `/config/sample_test/*` のパラメータを取得してくれます。
 
 ## まとめ
-思っていたよりは簡単にできましたが、AWSのプロファイルは`default`が使われるので変更したい場合は自前で設定書かないといけないみたいです。
+思っていたよりは簡単にできました！AWSのプロファイルは`default`が使われるので変更したい場合は自前で設定書かないといけないみたいです。
+
+ちなみに設定値の優先順位は パラメータストア > bootstram.yml > application.yml でした。bootstrap.ymlとかapplication.ymlに同じ設定書いてあってもパラメータストアに設定している場合は、パラメータストアの値が優先されます。
+
 
 ### Links
-[GitHub](https://github.com/b1a9id/spring-boot-parameter-store/tree/default)
-[Spring Cloud AWS 公式ドキュメント](https://docs.spring.io/spring-cloud-aws/docs/2.2.4.RELEASE/reference/html/)[]
-[AWS Systems Manager パラメータストア 公式ドキュメント
+- [GitHub](https://github.com/b1a9id/spring-boot-parameter-store/tree/default)
+- [Spring Cloud AWS 公式ドキュメント](https://docs.spring.io/spring-cloud-aws/docs/2.2.4.RELEASE/reference/html/)
+- [AWS Systems Manager パラメータストア 公式ドキュメント
 ](https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manager-parameter-store.html)
