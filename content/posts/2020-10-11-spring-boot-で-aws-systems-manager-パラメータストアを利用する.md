@@ -120,6 +120,6 @@ logging:
 
 ### Links
 [GitHub](https://github.com/b1a9id/spring-boot-parameter-store/tree/default)
-[Spring Cloud AWS](https://docs.spring.io/spring-cloud-aws/docs/2.2.4.RELEASE/reference/html/)[]
-[AWS Systems Manager パラメータストア
+[Spring Cloud AWS 公式ドキュメント](https://docs.spring.io/spring-cloud-aws/docs/2.2.4.RELEASE/reference/html/)[]
+[AWS Systems Manager パラメータストア 公式ドキュメント
 ](https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/systems-manager-parameter-store.html)
