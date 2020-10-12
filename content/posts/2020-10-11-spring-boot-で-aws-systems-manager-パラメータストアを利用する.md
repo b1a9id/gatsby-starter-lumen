@@ -76,7 +76,7 @@ application.ymlの全体\
 spring-cloud-starter-aws-parameter-store-configの設定です。
 `gist:b1a9id/e7fc42aa00fac04bcfe41d75f6034870?file=application.yml`
 
-EC2MetadataUtilsがAWS上で動いているか取得しますが、AWS環境以外でのアプリケーション起動時にエラーログを出してしまって気持ち悪いので設定します。（なくても動作には何も問題ないのです）
+EC2MetadataUtilsがAWS上で動いているか取得しますが、AWS環境以外でのアプリケーション起動時にエラーログを出してしまって気持ち悪いので設定します。（なくても動作には何も問題ないです）
 `gist:b1a9id/b256f8b182cdf71c537e0d513acf7dfc?file=application.yml`
 
 ### アプリケーションの起動
