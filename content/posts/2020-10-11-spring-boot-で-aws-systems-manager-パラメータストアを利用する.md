@@ -62,7 +62,7 @@ build.gradle\
 `gist:b1a9id/3ed18a10c04b15c797e7ab3c63e3fb36?file=build.gradle`
 
 ### 設定ファイル
-appliaction.yml(application.properties)には特に何も書かなくてOKですが、bootstrap.ymlにいくつか設定を書く必要があります。
+appliaction.yml(application.properties)には何も書かなくてOKですが、bootstrap.ymlにいくつか設定を書く必要があります。
 
 bootstrap.ymlの全体\
 `gist:b1a9id/048a8364381da15e14eb0833dbae92a0?file=bootstrap.yml`
