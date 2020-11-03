@@ -9,14 +9,14 @@ draft: false
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
 #### 2020/01 ~ 2020/07 入金サイクルの短縮化
-**利用技術：** Java 1.8、Spring 2.2.x、AWS(Elastic Beanstalk、Cloud Watch) 
+**利用技術：** Java 1.8、Spring Boot 2.2.x、AWS(Elastic Beanstalk、Cloud Watch) 
 
 競合サービスよりも加盟店さまへの入金までのスピードが遅かったため、2週間から翌々日に入金できるようにした。仕様検討、実装、テストを担当。\
 入金周りのコードはサービスローンチ時からほぼ手をいれおらず、実際の仕様を表現した実装になっていなかったり、特に方針もなく実装されていたので機能開発に加えて大規模リファクタリングも行った。\
 リリース直後から入金依頼が行われていて、加盟店さまにとってとても価値があることができたと実感できた。
 
 #### 2020/01 一次請けコールセンターの業務改善
-**利用技術：** Java 1.8、Spring 2.2.x、React、TypeScript
+**利用技術：** Java 1.8、Spring Boot 2.2.x、React、TypeScript
 
 社内専用サービスは、コールセンターの方たちは参照しかできないように制限をかけていたことで、冗長な書き込み系の作業が発生していたため、この工数を削減した。仕様検討、実装（フロントエンド・バックエンド）、テストを担当。\
 バックエンドはアクセス制限の変更（一部POSTを可能に）を行い、フロントエンドは表示内容の変更を行った。
@@ -31,13 +31,13 @@ QAチームと一緒にテスト項目書を作ってテストをしたのもあ
 このときの様子を[note](https://note.com/b1a9idps/n/n0b9ca2ee57a2)にまとめている。
 
 #### 2019/04 認証・認可周りの改修
-**利用技術：** Java 1.8、Spring 1.5.x
+**利用技術：** Java 1.8、Spring Boot 1.5.x
 
 Spring SecurityのSecurity Filter Chainを通過した後のSpring Webに処理が移ったときに認証・認可を行なっていた。Spring的に正しい実装方法ではなく、またサービス拡張を考えたときに拡張しづらくなることを考えて改修した。方針検討、実装、テストを担当。\
 Spring Securityを適切に利用することでセキュリティが高く、今後の拡張もしやすくなった。
 
 #### 2018/08 ~ 2019/03 コールセンターとカスタマーサポートチーム間の業務改善
-**利用技術：** Java 1.8、Spring 2.1.x、AWS(Elastic Beanstalk、Cloud Watch、Amazon Aurora、Cognito、S3)
+**利用技術：** Java 1.8、Spring Boot 2.1.x、AWS(Elastic Beanstalk、Cloud Watch、Amazon Aurora、Cognito、S3)
 
 コールセンターの方たちは社内専用サービスを利用することができず、スプレッドシート等でカスタマーサポートチームを必要な情報をやりとりしている状況だった。業務改善のために、社内専用サービスをコールセンターの方たちも利用できるようにした。API設計、実装、インフラ設計・構築、テスト担当。\
 当時社内に知見のなかったSpring Boot 2やMicrometer、TestContainersを導入しました。Amazon CognitoのSDKとSpring Security使って認証・認可処理を実装するのは特に苦戦した。TestContainersを導入したことで、本番と同じDBMSを利用したテストを書けるようになり、よりクオリティ高いテストを書けるようになった。\
@@ -49,7 +49,7 @@ Spring Securityを適切に利用することでセキュリティが高く、�
 雇用形態は、業務委託。Webアプリケーションエンジニアとして、Fashion Charity Projectの開発に携わる。
 
 #### 2020/05 ~ 2020/06 断チャリプロジェクト
-**利用技術：** Java 1.8、Spring 2.2.x、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker\
+**利用技術：** Java 1.8、Spring Boot 2.2.x、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker\
 **URL：** https://www.furusato-tax.jp/feature/a/fashion_charity_project
 
 [ふるさとチョイス](https://www.furusato-tax.jp/?header) と連携して、自治体に寄附できるようにするようにした。内部設計、実装、テストを担当。\
@@ -57,19 +57,19 @@ Spring Securityを適切に利用することでセキュリティが高く、�
 リリース会見が行われるため通常の寄付よりも流入が大きくそうだったので、これまで以上にパフォーマンスを意識して実装をした。特に大きな問題は発生しなかった。
 
 #### 2020/04 ブランドページのリニューアル
-**利用技術：** Java 1.8、Spring 2.2.x、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
+**利用技術：** Java 1.8、Spring Boot 2.2.x、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
 
 [ブランド一覧ベージ](https://www.waja.co.jp/fcp/brands) をブランディアで取り扱っているブランドの一覧に変更。内部設計、実装、テストを担当。\
 ブランド一覧の変更や月1で更新するためのCSVアップロード機能の実装を行った。月1しか更新されないため、キャッシュの実装も行った。
 
 #### 2019/01 認証認可の実装リファクタリング
-**利用技術：** Java 1.8、Spring 2.0.2、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
+**利用技術：** Java 1.8、Spring Boot 2.0.2、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
 
 Spring Security的に適切なクラスで適切な処理を書いていなかったため、リファクタリングを行った。方針検討、実装、テストを担当。\
 また、外部APIへの無駄なリクエストがあったり、セッションで保存しているログイン情報の取り扱いミスがあったりしたので、同時にリファクタリングも行った。
 
 #### 2018/12 ~ 2019/05 マイページ実装
-**利用技術：** Java 1.8、Spring 2.0.2、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
+**利用技術：** Java 1.8、Spring Boot 2.0.2、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
 
 寄付者が自分の寄付実績を確認できるようにマイページを実装した。内部設計、実装、テストを担当。\
 複数のテーブルを結合して実績を出すため、Criteria APIを使ってSQLを組み立てると複雑になりすぎることを懸念して、Native Queryを書くことにした。テスト項目が多かったこと、ヘッダのリプレースも行ったこともあり当初のスケジュールより遅めのリリースになってしまった。リリース後は、クリティカルなバグは出なかった。
@@ -79,11 +79,27 @@ Spring Security的に適切なクラスで適切な処理を書いていなか�
 ### 株式会社scrap&build（2020/01 ~ ）
 雇用形態は、業務委託。Webアプリケーションエンジニアとして、トライアングルソース業務支援やECサイト構築に携わる。
 
-### 株式会社waja（2017/4 ~ 2018/5）
-- Webアプリケーションエンジニア
-  - ファッションECの開発
-  - Fashion Charity Projectのフルリプレース
-  
+--- 
+
+### 株式会社waja（2017/04 ~ 2018/05）
+雇用形態は正社員。Webアプリケーションエンジニアとして、ファッションECの開発、Fashion Charity Projectの開発に携わる。
+
+#### 2018/03 ~ 2018/05 Fashion Charity Projectのフルリプレース
+**利用技術：** Java 1.8、Spring Boot 2.0.2、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
+
+サービスコンセプトの変更があったり、拡張性を考えていない作りになっていたりしたのでフルリプレースを行った。要件定義、内部設計、実装、テストを担当。\
+ほぼ1人でフルリプレースを行った。テーブル定義の見直しやリファクタリングも同時に行った。Vagrant上で起動していて、DBは全エンジニアで共有という開発環境だったので、Docker上でDBを起動して、アプリケーションはホストで直接起動できるようにして開発環境の改善も行った。
+フルリプレース及び申込フローの改善によって、寄付申込数を増やすことができた。
+
+#### 2017/05 ~ 2017/08 過去注文に追加できる機能の実装
+**利用技術：** Java 1.8、Spring 4.2.x、HTML、Thymeleaf、JSP、jQuery、PostgresSQL
+
+APIの設計・実装及びその他サーバサイドの実装を行った。API設計、実装、テストを担当。\
+より良いUIにするために、文言などの提案を行った。可読性をあげるため、コーダーが作ったHTMLをJSPに書き換える無駄な時間を削減するためにJSPからThymeleafを導入した。
+また、最後のテスト時にはテスト項目書を作成し、テスト精度向上に努めた。
+
+--- 
+
 ### タグバンガーズ株式会社（2015/5 ~ 2017/3）
 - Webアプリケーションエンジニア
   - 受託開発
