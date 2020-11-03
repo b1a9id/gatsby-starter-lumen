@@ -43,6 +43,8 @@ Spring Securityを適切に利用することでセキュリティが高く、�
 当時社内に知見のなかったSpring Boot 2やMicrometer、TestContainersを導入しました。Amazon CognitoのSDKとSpring Security使って認証・認可処理を実装するのは特に苦戦した。TestContainersを導入したことで、本番と同じDBMSを利用したテストを書けるようになり、よりクオリティ高いテストを書けるようになった。\
 開発以外では、プロジェクト全体の進捗管理を行ったり、QAやビジネスサイドの人たち向けに噛み砕いた資料を作って仕様説明会を行ったりした。
 
+--- 
+
 ### 株式会社デファクトスタンダード（2018/11 ~ ）
 雇用形態は、業務委託。Webアプリケーションエンジニアとして、Fashion Charity Projectの開発に携わる。
 
