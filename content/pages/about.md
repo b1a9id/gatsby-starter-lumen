@@ -4,7 +4,7 @@ title: About me
 slug: /pages/about
 draft: false
 ---
-## 職歴
+## ○ 職歴
 ### コイニー株式会社（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
@@ -115,6 +115,8 @@ API設計、実装、テストを担当。\
 設計、実装、テストを担当。\
 Cloud Formationを使い、30 ~ 50台のオンプレミスサーバのAWSへの移行のための補佐を行った。約30のテンプレートを作成した。タグ名にハイフンを指定できないなどCloud Formationで実現できない項目は、bashでスクリプトを作成して解決した。打ち合わせにも毎回参加し、進捗報告や要望などについて回答した。
 
+---
+
 ### コムチュア株式会社（2014/4 ~ 2015/4）
 雇用形態は正社員。システムエンジニアとして、統合監視ツールの導入をメインで行った。
 
@@ -124,14 +126,32 @@ AWS上にある統合運用管理基盤サービスのシナリオテストを�
 #### 2014/06 ~ 2015/04 様々の企業のサーバに運用監視ソフトウェアの導入
 携わった案件数：約25案件（規模は大小様々）
 
-## スキル
+## ○ 業務外の活動
+### 2016/12~ 日本Javaユーザーグループ
+毎月の勉強会や年2回のカンファレンスの運営、CFP応募サイトやWebサイトの開発などを行なう。
 
-* Java8 ~
-* Spring Framework, Spring Boot
-* AWS
-* Vue.js(独学)
+### 技術コミュニティでの登壇
+JJUC CCCやJSUG勉強会等での登壇。
 
-## SNS
+- [決済サービスのSpring Bootのバージョンを2系に上げた話](https://www.slideshare.net/RyosukeUchitate/spring-boot2)
+- [Form認証で学ぶSpring Security入門](https://www.slideshare.net/RyosukeUchitate/formspring-security)
+- [Amazon Cognito使って認証したい？それならSpring Security使いましょう！](https://www.slideshare.net/RyosukeUchitate/amazon-cognitospring-security)
+- [春だしBannerで遊バナいか？](https://www.slideshare.net/RyosukeUchitate/banner-94283851)
+- [ユニットテストのアサーション　流れるようなインターフェースのAssertJを添えて　入門者仕立て](https://www.slideshare.net/RyosukeUchitate/assertj-82260732)
+- [Spring 超入門~Springと出会ってから１年半~](https://www.slideshare.net/RyosukeUchitate/springspring1)
+- [Boot starterが語るSpring Bootの仕組み](https://www.slideshare.net/RyosukeUchitate/spring-io-2016-63373522)
+ 
+## ○ Tech Skill
+- 業務
+    - Java 1.8 ~
+    - Spring Framework, Spring Boot
+    - AWS
+    - React
+- 独学
+    - Kotlin(独学)
+    - Vue.js(独学)
+
+## ○ SNS
 
 * [Twitter](https://twitter.com/b1a9idps)
 * [GitHub](https://github.com/b1a9id)
