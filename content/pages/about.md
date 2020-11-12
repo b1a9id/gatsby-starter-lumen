@@ -48,6 +48,13 @@ Spring Securityを適切に利用することでセキュリティが高く、�
 ### 株式会社デファクトスタンダード（2018/11 ~ ）
 雇用形態は、業務委託。Webアプリケーションエンジニアとして、Fashion Charity Projectの開発に携わる。
 
+#### 2020/10 HTTPClientをSpring Cloud OpenFeignに書き換え
+**利用技術：** Java 1.8、Spring Boot 2.3.x、Spring Cloud OpenFeign(Spring Cloud Hoxton.SR8)、PostgresSQL、Docker
+
+サービスローンチ時に自前でHTTPClientを実装していたが、実装の簡単さと少なさを考えてSpring Cloud OpenFeignを利用するようにした。
+Controllerを書く感覚でインターフェースを実装するだけでHTTPClientを生成してくれるのはかなり便利だなと感じた。
+破壊的な変更だったため、1週間かけてサービス全体を動作確認したこともありリリース後まったく問題が発生しなかった。
+
 #### 2020/05 ~ 2020/06 断チャリプロジェクト
 **利用技術：** Java 1.8、Spring Boot 2.2.x、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker\
 **URL：** https://www.furusato-tax.jp/feature/a/fashion_charity_project
