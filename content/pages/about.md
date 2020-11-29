@@ -43,10 +43,11 @@ Spring Securityを適切に利用することでセキュリティが高く、�
 当時社内に知見のなかったSpring Boot 2やMicrometer、TestContainersを導入しました。Amazon CognitoのSDKとSpring Security使って認証・認可処理を実装するのは特に苦戦した。TestContainersを導入したことで、本番と同じDBMSを利用したテストを書けるようになり、よりクオリティ高いテストを書けるようになった。\
 開発以外では、プロジェクト全体の進捗管理を行ったり、QAやビジネスサイドの人たち向けに噛み砕いた資料を作って仕様説明会を行ったりした。
 
---- 
-
 ### 株式会社デファクトスタンダード（2018/11 ~ ）
 雇用形態は、業務委託。Webアプリケーションエンジニアとして、Fashion Charity Projectの開発に携わる。
+
+<details>
+<summary>業務内容</summary>
 
 #### 2020/10 HTTPClientをSpring Cloud OpenFeignに書き換え
 **利用技術：** Java 1.8、Spring Boot 2.3.x、Spring Cloud OpenFeign(Spring Cloud Hoxton.SR8)、PostgresSQL、Docker
@@ -81,15 +82,16 @@ Spring Security的に適切なクラスで適切な処理を書いていなか�
 寄付者が自分の寄付実績を確認できるようにマイページを実装した。内部設計、実装、テストを担当。\
 複数のテーブルを結合して実績を出すため、Criteria APIを使ってSQLを組み立てると複雑になりすぎることを懸念して、Native Queryを書くことにした。テスト項目が多かったこと、ヘッダのリプレースも行ったこともあり当初のスケジュールより遅めのリリースになってしまった。リリース後は、クリティカルなバグは出なかった。
 
----
+</details>
 
 ### 株式会社scrap&build（2020/01 ~ ）
 雇用形態は、業務委託。Webアプリケーションエンジニアとして、トライアングルソース業務支援やECサイト構築に携わる。
 
---- 
-
 ### 株式会社waja（2017/04 ~ 2018/05）
 雇用形態は正社員。Webアプリケーションエンジニアとして、ファッションECの開発、Fashion Charity Projectの開発に携わる。
+
+<details>
+<summary>業務内容</summary>
 
 #### 2018/03 ~ 2018/05 Fashion Charity Projectのフルリプレース
 **利用技術：** Java 1.8、Spring Boot 2.0.2、HTML(Thymeleaf)、jQuery、PostgresSQL、Docker
@@ -105,10 +107,13 @@ APIの設計・実装及びその他サーバサイドの実装を行った。AP
 より良いUIにするために、文言などの提案を行った。可読性をあげるため、コーダーが作ったHTMLをJSPに書き換える無駄な時間を削減するためにJSPからThymeleafを導入した。
 また、最後のテスト時にはテスト項目書を作成し、テスト精度向上に努めた。
 
---- 
+</details>
 
 ### タグバンガーズ株式会社（2015/05 ~ 2017/03）
 雇用形態は正社員。Webアプリケーションエンジニアとして、受託開発に携わる。
+
+<details>
+<summary>業務内容</summary>
 
 #### 2016/11 機械メーカポータルサイトの機能追加
 **利用技術：** Java 1.8、Spring Boot 1.4.x、HTML、Thymeleaf、Riot.js、PostgresSQL
@@ -122,16 +127,21 @@ API設計、実装、テストを担当。\
 設計、実装、テストを担当。\
 Cloud Formationを使い、30 ~ 50台のオンプレミスサーバのAWSへの移行のための補佐を行った。約30のテンプレートを作成した。タグ名にハイフンを指定できないなどCloud Formationで実現できない項目は、bashでスクリプトを作成して解決した。打ち合わせにも毎回参加し、進捗報告や要望などについて回答した。
 
----
+</details>
 
 ### コムチュア株式会社（2014/4 ~ 2015/4）
 雇用形態は正社員。システムエンジニアとして、統合監視ツールの導入をメインで行った。
+
+<details>
+<summary>業務内容</summary>
 
 #### 2015/02 ~ 2015/03 クラウド型の統合運用管理基盤サービスのシナリオテスト
 AWS上にある統合運用管理基盤サービスのシナリオテストを行った。
 
 #### 2014/06 ~ 2015/04 様々の企業のサーバに運用監視ソフトウェアの導入
 携わった案件数：約25案件（規模は大小様々）
+
+</details>
 
 ## ○ 業務外の活動
 ### 2016/12~ 日本Javaユーザーグループ
@@ -147,16 +157,6 @@ JJUC CCCやJSUG勉強会等での登壇。
 - [ユニットテストのアサーション　流れるようなインターフェースのAssertJを添えて　入門者仕立て](https://www.slideshare.net/RyosukeUchitate/assertj-82260732)
 - [Spring 超入門~Springと出会ってから１年半~](https://www.slideshare.net/RyosukeUchitate/springspring1)
 - [Boot starterが語るSpring Bootの仕組み](https://www.slideshare.net/RyosukeUchitate/spring-io-2016-63373522)
- 
-## ○ Tech Skill
-- 業務
-    - Java 1.8 ~
-    - Spring Framework, Spring Boot
-    - AWS
-    - React
-- 独学
-    - Kotlin(独学)
-    - Vue.js(独学)
 
 ## ○ SNS
 
