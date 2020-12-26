@@ -8,6 +8,29 @@ draft: false
 ### コイニー株式会社（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
+#### 2020/08 ~ 2020/12 社内用管理システムのユーザ管理・権限管理機能追加
+**利用技術：** Java 1.8、Spring Boot 2.3.x、AWS(Elastic Beanstalk、Cloud Watch、Parameter Store、Amazon Aurora) 、Terraform
+
+全加盟店を管理している社内用管理システム(S)では、Sシステム利用ユーザの登録や参照はできず（リプレース前の旧システムBで行っていた）。権限管理機能もなかった。Bシステムの停止や誤操作の防止のために機能追加を行った。\
+社内ユーザ管理や認証認可に関するところは、ローンチ時からほぼ手をつけられてなかったし今後もあまりタッチできないだろうと思い、大規模なリファクタリングも行った。具体的にはレイヤードアーキテクチャ、マイクロサービスなどの現在の実装方針に合うように実装した。\
+DB移行も必要だったため、TerraformでRDSを構築した。\
+
+また、社内にまだ実績のなかった、[springdoc-openapi](https://github.com/springdoc/springdoc-openapi)や[Spring Cloud OpenFeign](https://github.com/spring-cloud/spring-cloud-openfeign)やAWS Systems Manager パラメータストアを導入した。springdoc-openapiではドキュメントとコードの乖離の防止、Spring Cloud OpenFeignではHttpClientの実装工数削減、AWS Systems Manager パラメータストアではセキュリティレベルの向上ができた。
+検証時の様子をブログにまとめてある。
+
+- [springdoc-openapiでOpenAPI形式のAPIドキュメントを生成する](https://www.b1a9idps.com/posts/springdoc-openapi-1)
+- [Spring Cloud OpenFeignで遊ぶ](https://www.b1a9idps.com/posts/spring-cloud-open-feign-1)
+- [Spring BootアプリケーションでAWS Systems Manager パラメータストアを利用する](https://www.b1a9idps.com/posts/spring-boot-parameter-store)
+
+要件外のリファクタリングの変更が多かったが、バグを出してしまっては意味がないので、テスト項目書を作成しフロントエンドチームとQA前に2週間かけてテストを行った。QA期間中は疑問点等を自ら拾って回答するようにして品質向上に協力した。\
+プロジェクト開始時に立てたスケジュールよりも前倒しで進められた上に、リリース後バグもなくとても満足のいくプロジェクトとなった。
+
+#### 2020/07 TravisからGitHub Actionsへの移行
+**利用技術：** GitHub Actions
+
+開発時のCIはTravisを利用していたが、同レポジトリで動くジョブば1つで複数人が同時にPUSHすると、ビルド待ちがけっこう発生していた（1ビルドあたり10分）のでGitHub Actionsに移行した。\
+社内にまだ知見がなかったので、ドキュメントを読み込み手を動かした。GitHub Actionsにしたことで、パラレルでジョブが走るために待ち時間が短縮できた。また、GitHubだけで完結するために設定が楽になった。
+
 #### 2020/01 ~ 2020/07 入金サイクルの短縮化
 **利用技術：** Java 1.8、Spring Boot 2.2.x、AWS(Elastic Beanstalk、Cloud Watch) 
 
