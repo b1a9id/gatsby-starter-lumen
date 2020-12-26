@@ -16,9 +16,9 @@ tags:
 Spring Security 5.4(Spring Boot 2.4)から不正なURLでのリクエストに対して、任意のステータスコードを返せるようになりました。とっても嬉しい！！！
 
 ## Spring SecurityのHttpFirewall
-[公式ドキュメント#HttpFirewall](https://docs.spring.io/spring-security/site/docs/5.4.1/reference/html5/#servlet-httpfirewall) に詳しく書いてあるのですが、Spring Securityでは `;`や`\`が含まれている不正なURLを弾いてくれるHttpFirewallインターフェースがあります（デフォルトでStrictHttpFirewallクラスが使われる）。
+[公式ドキュメント#HttpFirewall](https://docs.spring.io/spring-security/site/docs/5.4.1/reference/html5/#servlet-httpfirewall) に詳しく書いてあるのですが、Spring Securityには `;`や`\`などが含まれている不正なURLを弾いてくれるHttpFirewallインターフェースがあります（デフォルトでStrictHttpFirewallクラスが使われる）。
 
-不正なURLだと、`RequestRejectedException`が投げられます（[ソースコード](https://github.com/spring-projects/spring-security/blob/5.4.x/web/src/main/java/org/springframework/security/web/firewall/StrictHttpFirewall.java#L442-L476)）。
+不正なURLだと、RequestRejectedExceptionが投げられます（[ソースコード](https://github.com/spring-projects/spring-security/blob/5.4.x/web/src/main/java/org/springframework/security/web/firewall/StrictHttpFirewall.java#L442-L476)）。
 
 ```
 2020-12-26 16:12:54.917 ERROR --- Servlet.service() for servlet [dispatcherServlet] in context with path [/] threw exception
