@@ -13,7 +13,7 @@ draft: false
 
 全加盟店を管理している社内用管理システム(S)では、Sシステム利用ユーザの登録や参照はできず（リプレース前の旧システムBで行っていた）。権限管理機能もなかった。Bシステムの停止や誤操作の防止のために機能追加を行った。\
 社内ユーザ管理や認証認可に関するところは、ローンチ時からほぼ手をつけられてなかったし今後もあまりタッチできないだろうと思い、大規模なリファクタリングも行った。具体的にはレイヤードアーキテクチャ、マイクロサービスなどの現在の実装方針に合うように実装した。\
-DB移行も必要だったため、TerraformでRDSを構築した。\
+DB移行も必要だったため、TerraformでRDSを構築した。
 
 また、社内にまだ実績のなかった、[springdoc-openapi](https://github.com/springdoc/springdoc-openapi)や[Spring Cloud OpenFeign](https://github.com/spring-cloud/spring-cloud-openfeign)やAWS Systems Manager パラメータストアを導入した。springdoc-openapiではドキュメントとコードの乖離の防止、Spring Cloud OpenFeignではHttpClientの実装工数削減、AWS Systems Manager パラメータストアではセキュリティレベルの向上ができた。
 検証時の様子をブログにまとめてある。
