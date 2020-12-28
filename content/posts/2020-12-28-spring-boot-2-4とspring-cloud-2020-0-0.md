@@ -114,7 +114,8 @@ actuatorで`startup`エンドポイントが利用できるようになった。
 
 ## Spring Security
 Spring Boot 2.4ではSpring Security 5.4を使っている。
-(whats' new)[https://docs.spring.io/spring-security/site/docs/5.4.0/reference/html5/#new]
+
+[whats' new](https://docs.spring.io/spring-security/site/docs/5.4.0/reference/html5/#new)
 
 # Spring Cloud 2020.0
 
