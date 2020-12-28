@@ -104,3 +104,14 @@ Spring Boot 2.4ではSpring Framework 5.3を使っている。
 
 ### TODO:spring.test.constructor.autowire.mode
 デフォルトの`@TestConstructor` autorwiring modeを変更するためにJUnit Platformの設定(junit-platform.properties)経由で`spring.test.constructor.autowire.mode`を設定できる。
+
+## Spring Data 2020.0
+Spring Boot 2.4ではSpring Data 2020.0を使っている。
+[Release Train Ockham (2020.0.0)](https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Ockham-(2020.0.0))
+
+## TODO:Startup Endpoint
+actuatorで`startup`エンドポイントが利用できるようになった。アプリケーション起動時の情報が見れる。
+
+## Spring Security
+Spring Boot 2.4ではSpring Security 5.4を使っている。
+(whats' new)[https://docs.spring.io/spring-security/site/docs/5.4.0/reference/html5/#new]
