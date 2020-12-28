@@ -25,6 +25,9 @@ JUnit 4以前のバージョンでテスト書いてる場合は、`junit-vintag
 ファイルやディレクトリが存在しないときに起動失敗させないようにするために、`optional:`プレフィックをつければよい。
 全てのロケーションをオプションにしたい場合は、`SpringApplication.setDefaultProperties(...)`で`spring.config.on-not-found=ignore`を指定するか、システム変数や環境変数で設定する。
 
+### 設定ファイルのChangelog
+[Spring Boot 2.4.0 Configuration Changelog](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4.0-Configuration-Changelog)
+
 ### 設定ファイルのマイグレーションガイド
 [Spring Boot Config Data Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-Config-Data-Migration-Guide)
 
@@ -64,3 +67,27 @@ spring:
 #### まとめ
 `application.yml`, `application-prod.yml`があって`-Dspring.profiles.active=prod`オプションをつけて起動すれば、これまで通りで変わらない。
 `application.yml`の1ファイルにして全ての外部ファイルをから上書きしたい場合は、変更が必要。
+
+## Logback
+プロパティが変更された。
+[Logback Configuration Properties](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4-Release-Notes#logback-configuration-properties)
+
+## Flyway
+Spring Boot 2.4ではFlyway 7になる。Flyway 5を利用している場合は、一旦Flyway 6に上げてからFlyway 7にする。
+
+## Spring Boot Gradle Plugin
+bootJarタスクのmailClassプロパティが変更になった。
+
+Spring Boot 2.3以前
+```
+bootJar {
+    mainClassName 'com.example.ExampleApplication'
+}
+```
+
+Spring Boot 2.4
+```
+bootJar {
+    mainClass 'com.example.ExampleApplication'
+}
+```
