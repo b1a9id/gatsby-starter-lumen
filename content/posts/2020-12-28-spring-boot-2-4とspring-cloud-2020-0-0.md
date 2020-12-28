@@ -91,3 +91,16 @@ bootJar {
     mainClass 'com.example.ExampleApplication'
 }
 ```
+
+## Spring Framework 5.3
+Spring Boot 2.4ではSpring Framework 5.3を使っている。
+[What's New in Version 5.3](https://github.com/spring-projects/spring-framework/wiki/What's-New-in-Spring-Framework-5.x#whats-new-in-version-53)
+
+### Jackson2ObjectMapperBuilderでConsumer<ObjectMapper>でObjectMapperをカスタマイズできる
+タイトルの通り
+
+### TODO:Spring MVCでPathPatterを用いてのURLマッチング
+[URL Matching with PathPattern in Spring MVC](https://spring.io/blog/2020/06/30/url-matching-with-pathpattern-in-spring-mvc)
+
+### TODO:spring.test.constructor.autowire.mode
+デフォルトの`@TestConstructor` autorwiring modeを変更するためにJUnit Platformの設定(junit-platform.properties)経由で`spring.test.constructor.autowire.mode`を設定できる。
