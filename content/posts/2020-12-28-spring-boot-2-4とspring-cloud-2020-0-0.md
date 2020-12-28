@@ -115,3 +115,11 @@ actuatorで`startup`エンドポイントが利用できるようになった。
 ## Spring Security
 Spring Boot 2.4ではSpring Security 5.4を使っている。
 (whats' new)[https://docs.spring.io/spring-security/site/docs/5.4.0/reference/html5/#new]
+
+# Spring Cloud 2020.0
+
+## Spring Cloud Config
+`spring.config.import=configserver:`のリトライがサポートされなくなった。
+回避策として、bootstrap.{yml|properties}を用意して、`spring-cloud-starter-bootstrap`を依存関係に追加する。
+
+
