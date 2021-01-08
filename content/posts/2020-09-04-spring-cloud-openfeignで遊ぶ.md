@@ -63,3 +63,10 @@ SakeController.java
 アプリケーションを起動してcurlでAPIを叩いた結果です。
 
 `gist:b1a9id/cc1bdf6a6ebfde988a995bb4c2efa6f4?file=result.txt`
+
+## 補足
+### リクエストログをみたい
+```
+logging.level.[clientが置いてあるパッケージ]=debug
+feign.client.config.default.logger-level=basic
+```
