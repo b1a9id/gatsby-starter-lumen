@@ -7,7 +7,8 @@ import Seo from '../components/Seo';
 const PostTemplate = ({ data }) => {
   const {
     title: siteTitle,
-    subtitle: siteSubtitle
+    subtitle: siteSubtitle,
+    url
   } = data.site.siteMetadata;
 
   const {
@@ -22,7 +23,7 @@ const PostTemplate = ({ data }) => {
       <Seo isRoot={false}
            title={`${postTitle} - ${siteTitle}`}
            description={metaDescription}/>
-      <Post post={data.markdownRemark} />
+      <Post post={data.markdownRemark} url={url} />
     </Layout>
   );
 };
