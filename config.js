@@ -23,7 +23,7 @@ module.exports = {
   ],
   author: {
     name: 'Ryosuke Uchitate',
-    photo: '/photo.jpg',
+    photo: '/photo.webp',
     bio: 'Java Developer in Japan. I like clothes. My favorite clothes brands are ETHOSENS, STOF, bedsidedrama and Portaille.',
     contacts: {
       twitter: 'b1a9idps',
