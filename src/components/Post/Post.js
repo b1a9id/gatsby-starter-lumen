@@ -15,14 +15,14 @@ const Post = ({ post }) => {
   } = post.frontmatter;
 
   const { html } = post;
-  const { tagSlugs } = post.fields;
+  const { tagSlugs, slug } = post.fields;
 
   return (
     <div className={styles['post']}>
       <Link className={styles['post__home-button']} to="/">All Articles</Link>
 
       <div className={styles['post__content']}>
-        <Content body={html} title={title} />
+        <Content body={html} title={title} slug={slug} />
       </div>
 
       <div className={styles['post__footer']}>
