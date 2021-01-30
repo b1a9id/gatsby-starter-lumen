@@ -64,6 +64,14 @@ spring:
       "debug": "debugdb,debugcloud"
 ```
 
+#### 設定ファイルの名前を変更する
+アプリケーション起動時にapplication.propertiesとapplication.yamlを自動的に探して読み込む。
+起動オプション `--spring.config.name=[拡張子なしのファイル名]`をつけて起動する。
+
+※1 ファイルがオプションであり、存在しなくても良い場合は、`optional:`プレフィックスをつける。
+※2 `spring.config.name`および`spring.config.location`はどのファイルをロードする必要があるかを判断するために非常に早い段階で使用されるため、環境プロパティ（OS環境変数、システムプロパティ、コマンドライン引数）として定義する必要がある。
+
+
 #### まとめ
 `application.yml`, `application-prod.yml`があって`-Dspring.profiles.active=prod`オプションをつけて起動すれば、これまで通りで変わらない。
 `application.yml`の1ファイルにして全ての外部ファイルをから上書きしたい場合は、変更が必要。
