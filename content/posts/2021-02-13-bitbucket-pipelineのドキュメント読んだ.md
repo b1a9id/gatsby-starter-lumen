@@ -75,4 +75,15 @@ Bitbucket Pipelinesとは、Bitbucket内で利用できるCI/CDサービス。�
 - caches
   - ライブラリ等をキャッシュする。
 
+# YAML anchors
+[YAML anchors](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/)
 
+bitbucket-pipelines.yml ファイルに繰り返し利用したいステップがある場合、YAML anchorsを利用するのがよい。
+
+## Anchors and aliases
+'&'で設定のまとまりを定義して、'*'で&で定義した設定のまとまりを利用できる。
+
+# ビルド環境としてDockerイメージを利用
+[Use Docker images as build environments](https://support.atlassian.com/bitbucket-cloud/docs/use-docker-images-as-build-environments/)
+
+DockerコンテナでBitbucket Pipelinesのビルドが実行される。Docker Hub, AWS, GCP, Azure, self-hosted registriesにあるパブリック、プライベートイメージを利用できる。
