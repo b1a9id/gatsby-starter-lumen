@@ -131,4 +131,6 @@ Spring Boot 2.4ではSpring Security 5.4を使っている。
 `spring.config.import=configserver:`のリトライがサポートされなくなった。
 回避策として、bootstrap.{yml|properties}を用意して、`spring-cloud-starter-bootstrap`を依存関係に追加する。
 
+https://docs.spring.io/spring-cloud-config/docs/current/reference/html/#_spring_cloud_config_client
+
 
