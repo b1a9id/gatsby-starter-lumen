@@ -75,15 +75,93 @@ Bitbucket Pipelinesとは、Bitbucket内で利用できるCI/CDサービス。�
 - caches
   - ライブラリ等をキャッシュする。
 
-# YAML anchors
+## YAML anchors
 [YAML anchors](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/)
 
 bitbucket-pipelines.yml ファイルに繰り返し利用したいステップがある場合、YAML anchorsを利用するのがよい。
 
-## Anchors and aliases
+### Anchors and aliases
 '&'で設定のまとまりを定義して、'*'で&で定義した設定のまとまりを利用できる。
 
-# ビルド環境としてDockerイメージを利用
+## ビルド環境としてDockerイメージを利用
 [Use Docker images as build environments](https://support.atlassian.com/bitbucket-cloud/docs/use-docker-images-as-build-environments/)
 
 DockerコンテナでBitbucket Pipelinesのビルドが実行される。Docker Hub, AWS, GCP, Azure, self-hosted registriesにあるパブリック、プライベートイメージを利用できる。
+
+# Deployments
+## Set up and monitor deployments
+[Set up and monitor deployments](https://support.atlassian.com/bitbucket-cloud/docs/set-up-and-monitor-deployments/)
+
+### デプロイの設定
+1.Bitbucketにデプロイ環境について設定する。
+- 環境名
+- 環境の種類
+- 環境変数
+
+2.環境を定義する
+パイプラインを有効にすると、デフォルトで3環境(Test, Staging, Production)が用意される。
+デプロイの変数は、チームとレポジトリの変数を上書きする。
+
+3.デプロイステップを定義する
+
+bitbucket-pipelines.ymlのstepにdeploymentを追加する。deploymentには、環境名を含む必要がある。
+
+```yml
+- step:
+        name: Deploy to production
+        deployment: production-east
+        script:
+          - python deployscript.py prod
+```
+
+コミットメッセージにissue番号を書けば、Jiraとの連携も可能。
+
+### デプロイのロールバック
+デプロイにした場合、直近の成功したデプロイバージョンに戻すことができる。
+
+1. Redeployボタンを有効にする
+2. 環境を選択して、Redeployボタンを押下する
+
+# Pipeline triggers
+## 手動実行
+bitbucket-pipelines.ymlに`trigger: manual`を追加することで、手動ステップを設定できる。最初のステップに手動トリガを設定することはできない。もし、手動実行だけのパイプラインを設定したい場合は、`custom`セクションの中に書く必要がある。
+
+`variable`セクションに手動実行時に渡したい変数を設定することができる。
+
+## スケジューリング
+指定した日時に実行させることができる。レポジトリの設定から日時を設定することができる。
+
+## ブランチ
+ブランチ毎のpushをトリガにしてパイプラインを実行させることができる。
+
+## Keywords
+- default
+  - 全ブランチの全push毎に実行される
+- tags
+  - 指定したタグで実行される。
+- pull-request
+  - プルリクエスト初期化時に実行される。defualtで定義されたパイプラインも実行されるため、２パイプラインが並行実行する。
+- custom
+  - 手動orスケジューリングトリガを設定する。
+- variables
+  - [Custom pipelines only]パイプライン実行時に渡す変数を定義する。
+- bookmarks
+  - ブックマーク
+
+# Variables and secrets
+[Variables and secrets](https://support.atlassian.com/bitbucket-cloud/docs/variables-and-secrets/)
+
+ビルドコンテナ内で利用する環境変数を設定できる。いくつかデフォルトで用意されており自分で設定することもできる。
+
+自分で設定する場合の制限は次の通り。
+```txt
+- 利用可能な文字は、ASCII文字、数字、アンダースコア
+- 大文字小文字は区別する
+- 数字からはじめることはできない
+- シェルによって定義される変数を利用するべきでない
+```
+
+設定できる変数は、ワークスペース変数、レポジトリ変数、デプロイメント変数がある。セキュアに変数を設定すると、ログに値が表示されない。
+
+## Bitbucket Pipelines内でSSHキーを利用する
+レポジトリのPipelinesのSSH keysで設定できる。
