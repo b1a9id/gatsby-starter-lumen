@@ -2,7 +2,7 @@
 template: post
 title: Bitbucket pipelineのドキュメント読んだ
 slug: /posts/bitbucket-pipelines
-draft: true
+draft: false
 date: 2021-02-22T16:18:11.757Z
 description: 2020年10月にBitbucketのサーバーライセンスの販売終了が発表されました。個人でいただいている仕事の方でBitbucket
   Serverを利用しており、BitBucket Cloudへの移行が必要になりました。Bitbucket
