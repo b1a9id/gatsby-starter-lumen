@@ -3,8 +3,10 @@ template: post
 title: Bitbucket pipelineのドキュメント読んだ
 slug: /posts/bitbucket-pipelines
 draft: true
-date: 2021-02-13T05:51:30.196Z
-description: 詳細
+date: 2021-02-22T16:18:11.757Z
+description: 2020年10月にBitbucketのサーバーライセンスの販売終了が発表されました。個人でいただいている仕事の方でBitbucket
+  Serverを利用しており、BitBucket Cloudへの移行が必要になりました。Bitbucket
+  CloudのデフォルトCI/CDであるBitbucket Pipelinesを利用するので、ドキュメントを読んでまとめます。
 category: CICD
 tags:
   - BitbucketPipelines
@@ -153,7 +155,7 @@ bitbucket-pipelines.ymlに`trigger: manual`を追加することで、手動ス�
 
 ビルドコンテナ内で利用する環境変数を設定できる。いくつかデフォルトで用意されており自分で設定することもできる。
 
-自分で設定する場合の制限は次の通り。
+自分で設定する場合の制約は次の通り。
 ```txt
 - 利用可能な文字は、ASCII文字、数字、アンダースコア
 - 大文字小文字は区別する
@@ -165,3 +167,29 @@ bitbucket-pipelines.ymlに`trigger: manual`を追加することで、手動ス�
 
 ## Bitbucket Pipelines内でSSHキーを利用する
 レポジトリのPipelinesのSSH keysで設定できる。
+
+# Caches
+[Caches](https://support.atlassian.com/bitbucket-cloud/docs/cache-dependencies/)
+
+Bitbucket　Pipelinesはサードパーティライブラリなどの外部の依存関係やディレクトリをキャッシュすることができる。最初のパイプライン実行時にキャッシュしてそれ以降はキャッシュを使う。
+
+# Databases and service containers
+[Databases and service containers](https://support.atlassian.com/bitbucket-cloud/docs/databases-and-service-containers/)
+
+Bitbucket　Pipelinesは、ビルドパイプラインから複数のテストなどで利用するためのDockerコンテナを実行することができる。（DBやRedisなど）
+
+# Use pipes in Bitbucket Pipelines
+[Use pipes in Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/use-pipes-in-bitbucket-pipelines/)
+
+Pipesは、パイプラインを設定するためのシンプルな方法を提供する。サードパーティのツールと動かしたい時に特に強力である。
+
+# Integrations
+[Integrations](https://support.atlassian.com/bitbucket-cloud/docs/integrations/)
+
+「Jira - Pipelines」、「Slack - Pipelines」などの連携について
+
+# Testing
+[Testing](https://support.atlassian.com/bitbucket-cloud/docs/testing/)
+
+## Test reporting in Pipelines
+ビルドステップの中でテストレポートを生成しているなら、pipelinesは自動的に探してWeb上で見れるようにする。ただし、xUnitのレポートに限る。
