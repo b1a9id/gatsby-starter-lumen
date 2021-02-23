@@ -193,3 +193,7 @@ Pipesは、パイプラインを設定するためのシンプルな方法を提
 
 ## Test reporting in Pipelines
 ビルドステップの中でテストレポートを生成しているなら、pipelinesは自動的に探してWeb上で見れるようにする。ただし、xUnitのレポートに限る。
+
+
+# Links
+- [日本語のナレッジベース](https://ja.confluence.atlassian.com/bitbucket/configuring-your-pipeline-872013574.html)
