@@ -8,6 +8,20 @@ draft: false
 ### ヘイ株式会社（旧：コイニー株式会社）（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
 
+#### 2020/12 ~ 2021/02 Elastic Beanstalkで動いているAPIのECS移行
+**利用技術：** Java 1.8、Spring Boot 2.2.x、Spring Cloud Hoxton.RELEASE、AWS(IAM、S3、ALB、ECS、Security Group) 、Terraform、GitHub Actions
+
+「2018/08 ~ 2019/03 コールセンターとカスタマーサポートチーム間の業務改善」のプロジェクトで作ったAPIがElastic Beanstalkで動いているのでECSに移行した。\
+「時代にそぐわない、Java 8より後のバージョンがAmazon Correttoしか利用できない、Beanstalkはブラックボックス化しているため不具合の原因調査等が難しい」など理由からECSへの移行を決めた。\
+デフォルトだと、アプリケーションログ、アクセスログ、エラーログが１箇所に吐き出されてしまうため、AWS FireLensを利用して分けて吐き出すようにした。デプロイはGitHub Actionsから行うようにした。
+
+#### 2020/12 ~ 2021/01 GitHub ActionsのデプロイログをS3にアップロードするバッチ作成
+**利用技術：** Java 11、Spring Boot 2.4.x、Spring Cloud 2020.0.x（Spring Cloud Openfeign）、AWS(IAM、S3) 、Terraform、GitHub Actions
+
+CI/CDをJenkinsからGitHub Actionsに移行するプロジェクトの前段階。監査の観点でデプロイログを一定期間保存する必要があるが、現在のGitHubのプランでは90日しか保存されないため、S3にデプロイログをアップロードするバッチを作成。\
+バッチは、「GitHubのAPIを叩いて、全レポジトリのワークフローの実行ログファイル（zip）を取得してS3にアップロードする」もので、これをGitHub Actionsのscheduleイベントを使って毎日12時に起動するようにした。
+LocalStackを使ってユニットテストを書きたかったが、AWS SDK for Java v2は対応してないため断念。
+
 #### 2020/08 ~ 2020/12 社内用管理システムのユーザ管理・権限管理機能追加
 **利用技術：** Java 1.8、Spring Boot 2.3.x、AWS(Elastic Beanstalk、Cloud Watch、Parameter Store、Amazon Aurora) 、Terraform
 
