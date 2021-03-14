@@ -1,15 +1,15 @@
 ---
 template: post
-title: Effective Java読んだ
+title: Effective Javaを読んで
 slug: /posts/read-effective-java-1
-draft: true
-date: 2021-03-14T00:00:00.000Z
-description: >-
-  Effective Java
+draft: false
+date: 2021-03-14T06:42:11.997Z
+description: Effective Javaを読んでの備忘録
 category: BOOK
 tags:
   - Effective Java
 ---
+もっとちゃんとJavaのこと理解したいなと思って、Effective Javaを読んだ。
 
 # オブジェクトの生成と消滅
 ## コンストラクタの代わりにstaticファクトリメソッドを検討する
