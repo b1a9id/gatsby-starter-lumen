@@ -2,9 +2,10 @@
 template: post
 title: SpringのロギングとExceptionハンドリング再入門
 slug: /posts/spring-logging
-draft: true
-date: 2021-03-21T11:19:54.019Z
-description: logging
+draft: false
+date: 2021-03-21T13:04:58.936Z
+description: Spring
+  MVCのロギング、Exceptionハンドリングについての再入門。ロギングについては、「ログのファイル出力」、「Logbackを使ったログ出力」について。Exceptionハンドリングについては、「HandlerExceptionResolverと呼び出される順序」について。
 category: Logging
 tags:
   - Java
@@ -13,7 +14,7 @@ tags:
 同僚氏のPRレビューをするにあたって、ロギング、Exceptionハンドリングよくわかってないなって思って再入門してみた。
 「@ExceptionHandlerのメソッドでハンドリングしたときのレスポンスをログ出力する」というのがPRの内容だった。
 
-「1.どこでアクセス（リクエスト）ログを出力するのがよいのか」、「2.ExceptionハンドリングってどうやってSpringで行われいるのか」について調べたことをまとめる。
+「1.どこでアクセス（リクエスト）ログを出力するのがよいのか」、「2.どうやってExceptionハンドリングが行われているのか」について調べたことをまとめる。
 
 **※本記事の環境はJava 11, Spring Boot 2.4.4**
 
@@ -82,3 +83,17 @@ Spring MVCで用意されている[CommonsRequestLoggingFilter.java](https://git
 
 
 ## Exceptionハンドリング
+Spring MVCで、Controller以降の処理で発生した例外をハンドリングするコンポーネントとして、[org.springframework.web.servlet.HandlerExceptionResolver](https://github.com/spring-projects/spring-framework/blob/master/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerExceptionResolver.java)インターフェースといくつかの実装クラスを提供している。
+
+デフォルトで適用されるHandlerExceptionResolverの実装クラスと呼び出される順序は、「1.ExceptionHandlerExceptionResolver.java」、「2.ResponseStatusExceptionResolver.java」、「3.DefaultHandlerExceptionResolver.java」である。
+
+- ExceptionHandlerExceptionResolver.java
+  - `@ExceptionHandler`を指定したメソッドのためのExceptionハンドラ
+- ResponseStatusExceptionResolver.java
+  - `@ResponseStatus`を付与した例外クラスのためのExceptionハンドラ
+- DefaultHandlerExceptionResolver.java
+  - Spring MVCのコントローラの処理で発生する例外をハンドリングするためのExceptionハンドラ
+
+
+## Links
+- [サンプルアプリケーション](https://github.com/b1a9id/logging-sample)
