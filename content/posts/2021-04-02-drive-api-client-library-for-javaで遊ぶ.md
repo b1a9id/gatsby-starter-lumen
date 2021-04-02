@@ -22,3 +22,7 @@ Drive API Client Library for Javaで遊んだのでまとめます。
 - Drive API Client Library for Java v3-rev20210315-1.31.0
 ```
 
+## GCPコンソール側の設定
+[google drive の Quickstart（サービスアカウント編）](https://playwithgoogleapi.hatenablog.com/entry/2019/06/30/133415) を参考にさせていただきました。\
+GCPコンソールでの設定は上記の記事をみてください。
+
