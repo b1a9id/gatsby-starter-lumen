@@ -4,8 +4,7 @@ title: Drive API Client Library for Javaで遊ぶ
 slug: /posts/gdrive-java
 draft: false
 date: 2021-04-02T08:46:08.841Z
-description: >
-  Drive API Client Library for Javaで遊んだのでまとめます。Google
+description: Drive API Client Library for Javaで遊んだのでまとめます。Google
   Driveのファイル一覧取得、ファイルのアップロード、ファイルのダウンロードを行なっています。
 category: GoogleDrive
 tags:
@@ -42,7 +41,7 @@ Google Drive APIにリクエストするときにクレデンシャル情報を�
 ## 実行結果
 正常に動いているようです。
 
-`gist:b1a9id/3b30340468302323a349494730631861`  
+`gist:b1a9id/3b30340468302323a349494730631861?file=log`  
 
 ## Links
 - [GitHubレポジトリ](https://github.com/b1a9id/google-drive-sandbox)
