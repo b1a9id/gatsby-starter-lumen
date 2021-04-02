@@ -31,20 +31,3 @@ Google Drive APIにリクエストするときにクレデンシャル情報を�
 
 `gist:b1a9id/2f982a7c564d3835c4f19f34e2646e76?file=Runner.java`  
 
-## Google Driveで遊ぶ
-親ディレクトリにあるファイル一覧取得、ファイルのアップロード、ファイルのダウンロードを行なっています。\
-
-`gist:b1a9id/a6ea2fa08b0db18a9f5cb0135ce801c3?file=FileServiceImpl.java`   
-
-ほぼ各ライブラリのREADME.mdを見ながら実装したのでそこまで解説することはないです。詳しくは[GitHubレポジトリ](https://github.com/b1a9id/google-drive-sandbox)を見てください。
-
-## 実行結果
-正常に動いているようです。
-
-`gist:b1a9id/3b30340468302323a349494730631861?file=log`  
-
-## Links
-- [GitHubレポジトリ](https://github.com/b1a9id/google-drive-sandbox)
-- [google-auth-library-java](https://github.com/googleapis/google-auth-library-java)
-- [google-api-java-client-services](https://github.com/googleapis/google-api-java-client-services/tree/master/clients/google-api-services-drive/v3)
-
