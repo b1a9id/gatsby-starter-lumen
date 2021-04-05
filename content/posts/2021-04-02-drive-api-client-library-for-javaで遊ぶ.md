@@ -4,7 +4,8 @@ title: Drive API Client Library for Javaで遊ぶ
 slug: /posts/gdrive-java
 draft: false
 date: 2021-04-02T08:46:08.841Z
-description: Drive API Client Library for Javaで遊んだのでまとめます。Google Driveのファイル一覧取得、ファイルのアップロード、ファイルのダウンロードを行なっています。
+description: Drive API Client Library for Javaで遊んだのでまとめます。Google
+  Driveのファイル一覧取得、ファイルのアップロード、ファイルのダウンロードを行なっています。
 category: GoogleDrive
 tags:
   - Java
@@ -24,6 +25,11 @@ Drive API Client Library for Javaで遊んだのでまとめます。
 ## GCPコンソール側の設定
 [google drive の Quickstart（サービスアカウント編）](https://playwithgoogleapi.hatenablog.com/entry/2019/06/30/133415) を参考にさせていただきました。\
 GCPコンソールでの設定は上記の記事をみてください。
+
+## 依存関係の追加
+Google Auth LibraryとDrive API Client Library for Javaを依存関係に追加します。
+
+`gist:b1a9id/d8a00af09e18fe05520e9f67bba477ac?file=build.gradle`  
 
 ## Credentialの作成
 Google Drive APIにリクエストするときにクレデンシャル情報を渡す必要があります。GCPコンソールからダウンロードしたサービスアカウントキーファイル（JSON）からインスタンスを作成します。
