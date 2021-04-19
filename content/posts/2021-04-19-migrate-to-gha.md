@@ -10,7 +10,7 @@ tags:
   - Jenkins
   - GitHub Actions
 ---
-社のCI/CDをJenkinsからGitHub Actionsに移行しました。
+社のCI/CDをJenkinsからGitHub Actionsに移行しました。3ヶ月くらいたくさんymlを書いたので、tipsでも残して置こうと思います。
 
 ## 環境
 - レポジトリは15くらい
