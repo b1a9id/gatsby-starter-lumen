@@ -1,20 +1,20 @@
 ---
 template: post
-title: JenkinsからGitHub Actionsへの完全移行をキメた
+title: JenkinsからGitHub Actionsへの移行をキメた
 slug: /posts/migrate-to-github-actions
 draft: true
 date: 2021-04-19T08:46:08.841Z
-description: JenkinsからGitHub Actionsへ完全移行をキメたのでtipsまとめます。
+description: JenkinsからGitHub Actionsへ移行をキメたのでtipsまとめます。2019年までに作ったアプリケーションのデプロイ・リリース作業はJenkinsで行なっていました。2020年に入ってコンテナ化が進み、AWS CodeBuild・AWS CodeDeployを使ってデプロイするようになったり、一部ではGitHub Actionsを使ってデプロイするようになったりとデプロイ・リリース方法が多様化していきました。JenkinsはEC2インスタンス立てて、そこにインストールしていましたが長年メンテナンスされてなかったし、ジョブの作り上デプロイ完了待ちが発生していました。デプロイ・リリース方法を統一したいするというのが第1の目的でした。
 category: CICD
 tags:
   - Jenkins
   - GitHub Actions
 ---
-社のCI/CDをJenkinsからGitHub Actionsに完全移行しました。
+社のCI/CDをJenkinsからGitHub Actionsに移行しました。
 
 ## 環境
 - レポジトリは15くらい
-- Amazon ECSとAWS Elastic Beanstalkにデプロイする
+- デプロイ環境は、Amazon ECSとAWS Elastic Beanstalk
 - アプリケーションは全部Java / Spring Boot（Gradle）
 
 ## 移行の背景
