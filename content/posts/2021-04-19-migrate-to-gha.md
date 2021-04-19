@@ -47,6 +47,17 @@ JenkinsはEC2インスタンス立てて、そこにインストールしてい�
 1. 移行完了が3ヶ月くらいはかかる見込みで、作業進めていく中でGitHub ActionsやAWSに新しい方法とかサービス出てるかもしれないが、取り入れずに一旦今の時点に揃えることする（よりよくするのはその後）
 2. すでにAWS CodeBuild・AWS CodeDeployを使っているものは2つくらいだったので一旦無視する
 
+### 利用した公式アクション
+- [actions/cache](https://github.com/actions/cache)
+- [actions/checkout](https://github.com/actions/checkout)
+- [actions/setup-java](https://github.com/actions/setup-java)
+- [actions/setup-python](https://github.com/actions/setup-python)
+- [aws-actions/amazon-ecr-login](https://github.com/aws-actions/amazon-ecr-login)
+- [aws-actions/amazon-ecs-deploy-task-definition](https://github.com/aws-actions/amazon-ecs-deploy-task-definition)
+- [aws-actions/amazon-ecs-render-task-definition](https://github.com/aws-actions/amazon-ecs-render-task-definition)
+- [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
+- [codecov/codecov-action](https://github.com/codecov/codecov-action)
+
 ### 工夫点
 #### 実行ログの永続化
 一番重要な実行ログ残す要件を満たすために、独自でバッチを作りました。今はプライベートレポジトリの実行ログ保存期間は最大400日になっていますが、当時は最大90日だった（気がする）のでログを永続化する方法を考えました。（もし400日以上残す場合は必要そう）
