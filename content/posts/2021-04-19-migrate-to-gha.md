@@ -92,4 +92,4 @@ GitHub Actionsでは、 [独自アクション](https://docs.github.com/ja/actio
 公式の [actions/cache](https://github.com/actions/cache) を使えば簡単に実現できます。
 
 #### jobなりstep単位でタイムアウト時間を設定する
-jobのタイムアウト時間はデフォルトで360分なので設定しないと長時間実行し続けて無料枠をすぐ消費してしまいます。
+jobのタイムアウト時間はデフォルトで360分なので設定しないと長時間実行し続けて無料枠をすぐ消費してしまいます。 [公式ドキュメント](https://docs.github.com/ja/actions/reference/workflow-syntax-for-github-actions)
