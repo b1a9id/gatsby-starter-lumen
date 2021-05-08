@@ -4,6 +4,11 @@ title: About me
 slug: /pages/about
 draft: false
 ---
+## ○ 所属
+- [ヘイ株式会社](https://hey.jp)（正社員）
+- [株式会社デファクトスタンダード](https://www.defactostandard.co.jp)（業務委託）
+- [GRASグループ株式会社](https://gras-group.co.jp)（業務委託）
+
 ## ○ 職歴
 ### ヘイ株式会社（旧：コイニー株式会社）（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
