@@ -4,9 +4,27 @@ title: About me
 slug: /pages/about
 draft: false
 ---
+## ○ 所属
+- [ヘイ株式会社](https://hey.jp)（正社員）
+- [株式会社デファクトスタンダード](https://www.defactostandard.co.jp)（業務委託）
+- [GRASグループ株式会社](https://gras-group.co.jp)（業務委託）
+
 ## ○ 職歴
 ### ヘイ株式会社（旧：コイニー株式会社）（2018/06 ~ ）
 雇用形態は正社員。Webアプリケーションエンジニアとして、STORES決済の開発に携わる。
+
+#### 2021/01 ~ 2021/04 JenkinsからGitHub Actionsへの移行
+**利用技術：** AWS、Terraform、GitHub Actions
+
+次のような理由で、JenkinsからGitHub Actionsへの移行を決めた。
+1. デプロイ・リリース方法が多様化されている上にちゃんとドキュメントがなく、全環境の手順把握してる人もいないため、使うツールや手順を統一したい
+2. 数年Jenkinsのメンテナンスされてこなかったし、これからもメンテナンスしたくない
+3. ジョブの作り上、ビルド・デプロイに時間がかかるため改善したい
+
+既存で使われていたのが、AWS CodeBuild・AWS CodeDeployとGitHub Actionsだったのでこの2択だった。前者だと、設定ファイル結構用意しないといけないしデプロイ作業が手間そうだったので、後者に決めた。
+運用のことを考えて、実行ログの永続化のために独自でバッチを作ったり、Slack通知をするジョブを全レポジトリに展開するために独自アクションを作ったりした。
+
+詳細は、[JenkinsからGitHub Actionsへの移行をキメた](https://www.b1a9idps.com/posts/migrate-to-github-actions)にまとめてある。
 
 #### 2020/12 ~ 2021/02 Elastic Beanstalkで動いているAPIのECS移行
 **利用技術：** Java 1.8、Spring Boot 2.2.x、Spring Cloud Hoxton.RELEASE、AWS(IAM、S3、ALB、ECS、Security Group) 、Terraform、GitHub Actions
