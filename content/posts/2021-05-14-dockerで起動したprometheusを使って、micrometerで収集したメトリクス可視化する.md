@@ -23,3 +23,18 @@ Amazon Managed Service for Prometheusが値下げされるという [記事](htt
 アプリケーションを起動して、`GET http://localhost:8080`を叩くと次のようなレスポンスが返ってきます。  
 `gist:b1a9id/6fcc243a9e937106656d284ec6811450?file=index.json`  
 
+次に、Actuatorの `GET /actuator/prometheus` エンドポイントを有効にします。Prometheusがこのエンドポイントを叩いてメトリクス情報を収集します。  
+`gist:b1a9id/bf99fe3d66d73fa6dc7f86267610ae82?file=application.yml`  
+`GET http://localhost/actuator/prometheus`を叩くと、Prometheusのフォーマットでメトリクス情報が返ってきます。
+
+## Dockerコンテナで起動
+docker-compose.ymlを用意して、先に実装したアプリケーションとPrometheusをDockerコンテナ上で起動するようにします。
+`gist:b1a9id/817e5b25afd643813246d72fe64f9954?file=docker-compose.yml`  
+
+次に、Prometheusの設定ファイルを用意します。
+ほぼ、Spring Bootのドキュメントにある[サンプル](https://docs.spring.io/spring-boot/docs/2.4.5/reference/html/production-ready-features.html#production-ready-metrics-export-prometheus)通りです。
+`gist:b1a9id/c618a1300354d155c041051dcd4b3cb1?file=prometheus.yml`  
+
+それでは、コンテナを起動してみましょう。
+`gist:b1a9id/b2b63b449929c39e92e07b6720dad925?file=docker-compose.log`  
+
