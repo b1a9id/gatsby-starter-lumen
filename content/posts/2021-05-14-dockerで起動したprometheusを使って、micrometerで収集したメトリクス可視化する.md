@@ -35,6 +35,9 @@ docker-compose.ymlを用意して、先に実装したアプリケーション�
 ほぼ、Spring Bootのドキュメントにある[サンプル](https://docs.spring.io/spring-boot/docs/2.4.5/reference/html/production-ready-features.html#production-ready-metrics-export-prometheus)通りです。
 `gist:b1a9id/c618a1300354d155c041051dcd4b3cb1?file=prometheus.yml`  
 
+次に、[jibのGradleプラグイン](https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin)を使ってアプリケーションのDockerイメージを作成します。8080番ポートで起動するようにしています。
+`gist:b1a9id/f459aa7d98d59da1625252003e05b08e?file=build.gradle`  
+
 それでは、コンテナを起動してみましょう。
 `gist:b1a9id/b2b63b449929c39e92e07b6720dad925?file=docker-compose.log`  
 
