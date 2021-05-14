@@ -1,6 +1,6 @@
 ---
 template: post
-title: Dockerで起動したPrometheusを使って、Micrometerで収集したメトリクス可視化する
+title: Docker上で起動したPrometheusを使って、Micrometerで収集したメトリクス可視化する
 slug: /micrometer-prometheus-in-docker
 draft: true
 date: 2021-05-14T04:14:20.291Z
