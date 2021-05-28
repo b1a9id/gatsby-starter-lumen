@@ -99,5 +99,4 @@ docker-compose.ymlを用意して、先に実装したアプリケーション�
 ## Links
 - [Prometheus](https://prometheus.io/docs/introduction/overview/)
 - [Micrometer](https://micrometer.io)
-- [micrometer-prometheusレポジトリ]
-(https://github.com/b1a9id/micrometer-prometheus)
+- [micrometer-prometheusレポジトリ](https://github.com/b1a9id/micrometer-prometheus)
